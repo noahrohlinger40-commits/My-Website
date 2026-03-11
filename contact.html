@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah Rohlinger | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="portfolio-stage" id="top">
+        <header class="topbar">
+          <div class="brand-lockup">
+            <a class="brand" href="index.html">Noah Rohlinger</a>
+            <p class="brand-note">
+              FSU Information Technology student focused on software, web, and
+              technical problem solving.
+            </p>
+          </div>
+
+          <nav class="main-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+          </nav>
+
+          <a class="button button--ghost" href="contact.html">Contact Me</a>
+        </header>
+
+        <section class="subpage-hero">
+          <div class="subpage-hero__content">
+            <p class="eyebrow">Contact</p>
+            <h1>Reach out about internships, project feedback, or technical collaboration.</h1>
+            <p class="subpage-hero__lede">
+              This page gives you both of my email addresses and a simple form
+              that opens a pre-filled draft so the site stays easy to maintain.
+            </p>
+          </div>
+        </section>
+
+        <section class="contact-section contact-page">
+          <div class="contact-section__intro">
+            <p class="eyebrow">Get In Touch</p>
+            <h2>Use whichever email makes the most sense for the situation.</h2>
+            <p class="contact-section__lede">
+              My FSU email works well for academic and university-related
+              conversations, while my personal email is best for general
+              portfolio questions, opportunities, and networking.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-details__card">
+                <p class="contact-details__label">FSU Email</p>
+                <a href="mailto:Nzr25@fsu.edu">Nzr25@fsu.edu</a>
+              </div>
+              <div class="contact-details__card">
+                <p class="contact-details__label">Personal Email</p>
+                <a href="mailto:noah.rohlinger40@gmail.com"
+                  >noah.rohlinger40@gmail.com</a
+                >
+              </div>
+              <div class="contact-details__card">
+                <p class="contact-details__label">Location</p>
+                <p>Tallahassee, Florida</p>
+              </div>
+              <div class="contact-details__card">
+                <p class="contact-details__label">Response Time</p>
+                <p>Usually within 1 to 2 business days</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" data-contact-form>
+            <div class="contact-form__grid">
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Reason For Reaching Out</span>
+                <select name="projectType" required>
+                  <option value="">Choose one</option>
+                  <option>Internship opportunity</option>
+                  <option>Project collaboration</option>
+                  <option>Portfolio feedback</option>
+                  <option>Technical question</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span class="field__label">Priority</span>
+                <select name="timeline" required>
+                  <option value="">Choose one</option>
+                  <option>This week</option>
+                  <option>This month</option>
+                  <option>No rush</option>
+                  <option>Just saying hello</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field field--full">
+              <span class="field__label">Message</span>
+              <textarea
+                name="message"
+                rows="7"
+                placeholder="Ask about a project, share an opportunity, or tell me why you are reaching out."
+                required
+              ></textarea>
+            </label>
+
+            <div class="contact-form__footer">
+              <button class="button button--solid" type="submit">Send Message</button>
+              <p class="contact-form__note">
+                Your email app will open with the message pre-filled.
+              </p>
+            </div>
+
+            <p class="contact-form__status" data-form-status aria-live="polite"></p>
+          </form>
+        </section>
+
+        <footer class="site-footer">
+          <p class="site-footer__note">
+            Built to showcase programming projects, technical coursework, and
+            hands-on IT experience.
+          </p>
+          <div class="site-footer__emails">
+            <a class="site-footer__mail" href="mailto:Nzr25@fsu.edu"
+              >Nzr25@fsu.edu</a
+            >
+            <a
+              class="site-footer__mail"
+              href="mailto:noah.rohlinger40@gmail.com"
+              >noah.rohlinger40@gmail.com</a
+            >
+          </div>
+          <a class="site-footer__top" href="#top">Back to top</a>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
