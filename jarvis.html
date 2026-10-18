@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jarvis: a self-hosted Windows AI assistant in C# and .NET 8 with wake-word detection, speech recognition, memory, and desktop automation. Released as v1.0.0." />
+    <link rel="canonical" href="https://noahrohling.netlify.app/jarvis.html" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:title" content="Noah Rohlinger | Jarvis" />
+    <meta property="og:description" content="Jarvis: a self-hosted Windows AI assistant in C# and .NET 8 with wake-word detection, speech recognition, memory, and desktop automation. Released as v1.0.0." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://noahrohling.netlify.app/jarvis.html" />
+    <meta property="og:image" content="https://noahrohling.netlify.app/screenshots/jarvis-operations-surface.jpg" />
+    <meta property="og:image:width" content="1362" />
+    <meta property="og:image:height" content="731" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Noah Rohlinger | Jarvis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
+    <link rel="stylesheet" href="redesign.css" />
+  </head>
+  <body class="np-page">
+    <a class="np-skip" href="#main-content">Skip to main content</a>
+
+    <header class="np-header">
+      <div class="np-wrap np-header__inner">
+        <a class="np-brand" href="index.html">Noah Rohlinger</a>
+        <nav class="np-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <main class="np-wrap" id="main-content">
+      <section class="np-page-head">
+        <p class="np-eyebrow">Desktop AI assistant &middot; Spring 2026 to present</p>
+        <h1>Jarvis</h1>
+        <p class="np-page-head__lede">Jarvis is the AI assistant I keep tinkering with: an ongoing experiment in self-hosted AI, speech, memory, and desktop automation.</p>
+        <div class="np-page-head__actions">
+          <a class="np-btn np-btn--primary" href="https://github.com/noahrohlinger40-commits/My-Personal-AI-Assistant-Jarvis-/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Download v1.0.0 release</a>
+          <a class="np-btn np-btn--ghost" href="https://github.com/noahrohlinger40-commits/My-Personal-AI-Assistant-Jarvis-" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a class="np-link" href="projects.html">All projects</a>
+        </div>
+      </section>
+
+      <section class="np-section" aria-label="Project facts">
+        <dl class="np-facts">
+          <div>
+            <dt>Stack</dt>
+            <dd>C#, .NET 8, Windows Forms, LM Studio, OpenAI-compatible APIs</dd>
+          </div>
+          <div>
+            <dt>Current state</dt>
+            <dd>Released as v1.0.0 with wake word, reminders, research, memory tools, and a live desktop operations surface.</dd>
+          </div>
+          <div>
+            <dt>Biggest challenge</dt>
+            <dd>Balancing privacy-focused local models against accuracy, latency, and structured-output reliability in the planner.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Overview</h2>
+        </div>
+        <p class="np-prose">Jarvis is my own take on a desktop AI assistant, and I keep building on it. It combines a Windows Forms app, a C#/.NET 8 assistant runtime, voice input and output, memory, reminders, web research, screen-aware tooling, and desktop automation into one local Windows system.</p>
+        <ul class="np-points">
+          <li><strong>Multi-part application structure</strong> The project is split between Jarvis.Core for planning, memory, tool dispatch, and safety logic, plus Jarvis.App for the Windows UI, microphone pipeline, wake-word flow, and live operations surface.</li>
+          <li><strong>Speech and local-model experimentation</strong> Supports wake-word detection, speech recognition, text to speech, memory recall, and live assistant interaction while comparing local LM Studio models against cloud-backed OpenAI-compatible options.</li>
+          <li><strong>Testing and iteration</strong> The project was tested against app launching, reminders, research, screen reading, memory workflows, and automation reliability, with the project writeup documenting what worked, what broke, and why.</li>
+        </ul>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>What it looks like</h2>
+        </div>
+        <div class="np-shots">
+          <figure class="np-shot np-shot--wide">
+            <img src="screenshots/jarvis-operations-surface.jpg" alt="Jarvis live operations surface: wake-word status, response stream, conversation feed, waveform, microphone controls, and DSP tuning in one window." width="1362" height="731" loading="lazy" decoding="async" />
+            <figcaption><strong>The live operations surface</strong> The main window while Jarvis is listening for its wake word. The right rail carries the waveform, microphone selection, DSP and wake-engine settings, and the calibration tools I had to build after the assistant started responding to its own speaker output.</figcaption>
+          </figure>
+          <figure class="np-shot">
+            <img src="screenshots/jarvis-memory-workbench.jpg" alt="Jarvis memory workbench listing 43 active memory items with id, kind, category, retention policy, and content columns." width="1261" height="765" loading="lazy" decoding="async" />
+            <figcaption><strong>The memory workbench</strong> Memory is not a hidden log. Every item is inspectable and editable: 43 active items here, each with a kind, category, retention policy, importance score, and expiry. Episodic task outcomes and rolling conversation summaries are stored separately so old activity can age out without losing preferences.</figcaption>
+          </figure>
+          <figure class="np-shot">
+            <img src="screenshots/jarvis-local-inference.jpg" alt="Jarvis running beside LM Studio with the Qwen3 4B Thinking model loaded and a local server listening on 127.0.0.1:1234." width="1358" height="725" loading="lazy" decoding="async" />
+            <figcaption><strong>Running fully local</strong> Jarvis beside LM Studio with Qwen3 4B Thinking loaded as a 2.5 GB GGUF, served from 127.0.0.1:1234. Nothing in this configuration leaves the machine, which was the point of the project and the reason I accepted slower responses than a cloud model would give.</figcaption>
+          </figure>
+          <figure class="np-shot np-shot--wide">
+            <div class="np-shot__pair">
+              <img src="screenshots/jarvis-alias-before.jpg" alt="Conversation feed showing Jarvis failing to open an application because speech recognition heard the word spotted five instead of Spotify." width="1169" height="373" loading="lazy" decoding="async" />
+              <img src="screenshots/jarvis-alias-after.jpg" alt="Conversation feed showing the same command succeeding, with the runtime resolving slots as an alias to spotify." width="1149" height="365" loading="lazy" decoding="async" />
+            </div>
+            <figcaption><strong>A bug worth showing: misheard app names</strong> Speech recognition turned "Spotify" into "spotted five," and the launcher failed against a process name that does not exist. The fix was a phonetic alias map in the settings file, so the same command now resolves "slots" to spotify and opens the app. It is a small change that came from watching the assistant fail in a specific, repeatable way.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>What is in v1.0.0</h2>
+        </div>
+        <p class="np-prose">v1.0.0 is the first public source release, published September 21, 2026. It covers 71 source files and roughly 50,900 lines across the two main components.</p>
+        <ul class="np-points">
+          <li><strong>Jarvis.Core, the assistant engine</strong> A planner handling tool calling, intent routing, and reflection, with 67 assistant tools spanning files, shell, window management, browser control, media, messaging, email, Office integration, memory, reminders, research, and weather.</li>
+          <li><strong>Memory and automation</strong> A memory subsystem with JSON storage, semantic search, retention policies, and privacy controls, plus desktop automation through Win32 UI Automation.</li>
+          <li><strong>Model gateway and safety layer</strong> Compatible with OpenAI-style endpoints and local runtimes, with approval gates in front of destructive operations.</li>
+          <li><strong>Jarvis.App, the Windows Forms host</strong> Multiple voice runtimes including realtime transcription and Windows Speech, wake-word detection with microphone-specific DSP profiles and calibration, acoustic echo suppression, clap detection, and memory and presence workbenches with an operations HUD.</li>
+          <li><strong>Biggest changes in this release</strong> Speech recognition moved from a cloud provider to a local speech server, and the planner moved to a larger locally hosted model across all four roles.</li>
+          <li><strong>Known limitations</strong> No automated tests or CI pipeline yet, Windows only (net8.0-windows with WinForms), and full offline operation needs a local model endpoint and speech server running.</li>
+        </ul>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Presented to the CCI Leadership Board</h2>
+        </div>
+        <p class="np-prose">In October 2026 I presented Jarvis to the Florida State College of Communication and Information Leadership Board. In the live demo it summarized an article, added an example to my lecture notes, and opened Sticky Notes to write something down for me. The question I got most was how it works, which is what this page is here to answer.</p>
+        <div class="np-shots">
+          <figure class="np-shot np-shot--wide">
+            <img src="photos/jarvis-cci-demo.jpg" alt="Noah Rohlinger demoing Jarvis on his laptop to a guest at the CCI Leadership Board event." width="1280" height="853" loading="lazy" decoding="async" />
+            <figcaption><strong>Demoing Jarvis to the board</strong> Walking a guest through Jarvis at the CCI Leadership Board event in October 2026.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Where it can grow next</h2>
+        </div>
+        <p class="np-prose">My end goal is a secure and private AI that does a lot more than my basic tasks: controlling the Bluetooth and Wi-Fi devices in my apartment, talking to it from my phone when I'm on the go, and running it on an AI model I train myself instead of LM Studio. Closer in, the next steps are more reliable structured tool use on local models, cleaner automation of modern apps, a proper installer, and calendar and email integrations.</p>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Project materials</h2>
+        </div>
+        <div class="np-grid">
+          <a class="np-card np-project" href="https://github.com/noahrohlinger40-commits/My-Personal-AI-Assistant-Jarvis-/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">
+            <p class="np-project__kind">GitHub release</p>
+            <h3 class="np-project__name">Jarvis v1.0.0 release</h3>
+            <p>The tagged v1.0.0 release on GitHub, with the packaged build and release notes for the current version of the assistant.</p>
+            <span class="np-project__more">Open release</span>
+          </a>
+          <a class="np-card np-project" href="jarvis-presentation.pptx" download="jarvis-presentation.pptx">
+            <p class="np-project__kind">Slides &middot; PPTX</p>
+            <h3 class="np-project__name">Jarvis project presentation</h3>
+            <p>Download the slide deck covering the architecture, the voice pipeline, local inference benchmarks, the problems I ran into, and the roadmap.</p>
+            <span class="np-project__more">Download slides</span>
+          </a>
+          <a class="np-card np-project" href="jarvis-final-project.docx" download="jarvis-final-project.docx">
+            <p class="np-project__kind">Writeup &middot; DOCX</p>
+            <h3 class="np-project__name">Jarvis project writeup</h3>
+            <p>Download the project documentation covering the design, setup process, testing results, tradeoffs, and lessons learned.</p>
+            <span class="np-project__more">Download writeup</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Why it matters</h2>
+        </div>
+        <p class="np-prose">Jarvis shows that I am willing to take on a difficult project on my own, learn across several systems, and document tradeoffs honestly. It is one of the clearest examples of how I handle a bigger technical challenge.</p>
+      </section>
+
+      <section class="np-section">
+        <div class="np-cta">
+          <div>
+            <h2>Let's talk</h2>
+            <p>Hiring for a 2027 IT internship, or want to ask about a project? Email is the fastest way to reach me.</p>
+          </div>
+          <div class="np-cta__actions">
+            <a class="np-btn np-btn--primary" href="mailto:noah.rohlinger40@gmail.com">Email me</a>
+            <a class="np-btn np-btn--ghost" href="contact.html">Contact form</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="np-wrap np-footer">
+      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+      <nav aria-label="Elsewhere">
+        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
+        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </footer>
+
+    <script>
+      // Phone menu: below 860px the nav stays hidden until this button opens it.
+      const menuBtn = document.querySelector(".np-menu-btn");
+      menuBtn.addEventListener("click", () => {
+        const open = document.getElementById("site-nav").classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+    </script>
+  </body>
+</html>

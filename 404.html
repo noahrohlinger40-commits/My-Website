@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Noah Rohlinger | Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
+    <!-- Root-relative paths: Netlify serves this page at any missing URL, including nested ones. -->
+    <link rel="stylesheet" href="/redesign.css" />
+  </head>
+  <body class="np-page">
+    <a class="np-skip" href="#main-content">Skip to main content</a>
+
+    <header class="np-header">
+      <div class="np-wrap np-header__inner">
+        <a class="np-brand" href="/">Noah Rohlinger</a>
+        <nav class="np-nav" id="site-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <a class="np-btn np-btn--ghost np-btn--sm" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <main class="np-wrap" id="main-content">
+      <section class="np-page-head">
+        <p class="np-eyebrow">404</p>
+        <h1>That page does not exist</h1>
+        <p class="np-page-head__lede">The link may be out of date or mistyped. The pages below cover everything on the site.</p>
+        <div class="np-page-head__actions">
+          <a class="np-btn np-btn--primary" href="/">Go to home</a>
+          <a class="np-btn np-btn--ghost" href="/projects.html">View projects</a>
+          <a class="np-btn np-btn--ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download resume</a>
+          <a class="np-link" href="/contact.html">Contact</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="np-wrap np-footer">
+      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+      <nav aria-label="Elsewhere">
+        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
+        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </footer>
+
+    <script>
+      // Phone menu: below 860px the nav stays hidden until this button opens it.
+      const menuBtn = document.querySelector(".np-menu-btn");
+      menuBtn.addEventListener("click", () => {
+        const open = document.getElementById("site-nav").classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+    </script>
+  </body>
+</html>

@@ -3,149 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Technical projects by Noah Rohlinger, including an ASP.NET Core help desk API, a Java subnet scanner, a self-hosted C# desktop AI assistant, and this portfolio site." />
+    <link rel="canonical" href="https://noahrohling.netlify.app/projects.html" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:title" content="Noah Rohlinger | Projects" />
+    <meta property="og:description" content="Technical projects by Noah Rohlinger, including an ASP.NET Core help desk API, a Java subnet scanner, a self-hosted C# desktop AI assistant, and this portfolio site." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://noahrohling.netlify.app/projects.html" />
+    <meta property="og:image" content="https://noahrohling.netlify.app/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <title>Noah Rohlinger | Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
+    <link rel="stylesheet" href="redesign.css" />
   </head>
-  <body>
-    <div class="page-shell">
-      <main class="portfolio-stage" id="top">
-        <header class="topbar">
-          <div class="brand-lockup">
-            <a class="brand" href="index.html">Noah Rohlinger</a>
-            <p class="brand-note">
-              FSU Information Technology student focused on software, web, and
-              technical problem solving.
-            </p>
-          </div>
+  <body class="np-page">
+    <a class="np-skip" href="#main-content">Skip to main content</a>
 
-          <nav class="main-nav" aria-label="Primary">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html" aria-current="page">Projects</a>
-            <a href="contact.html">Contact</a>
-          </nav>
+    <header class="np-header">
+      <div class="np-wrap np-header__inner">
+        <a class="np-brand" href="index.html">Noah Rohlinger</a>
+        <nav class="np-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      </div>
+    </header>
 
-          <a class="button button--ghost" href="contact.html">Contact Me</a>
-        </header>
+    <main class="np-wrap" id="main-content">
+      <section class="np-page-head">
+        <p class="np-eyebrow">Projects</p>
+        <h1>Projects that turn class work into practical examples</h1>
+        <p class="np-page-head__lede">These projects show how I approach programming, problem solving and documentation as an IT student. They range from a released desktop assistant to a backend API, a network scanner and this website.</p>
+      </section>
 
-        <section class="subpage-hero">
-          <div class="subpage-hero__content">
-            <p class="eyebrow">Projects</p>
-            <h1>Portfolio pieces that show how I approach code and technical problem solving.</h1>
-            <p class="subpage-hero__lede">
-              This page is where I can feature coursework, personal builds, and
-              experiments that demonstrate how I write code, structure
-              interfaces, and work through real development tasks.
-            </p>
-          </div>
-        </section>
+      <div class="np-filters">
+        <label class="np-field">
+          <span class="np-field__label">Search</span>
+          <input id="projectSearch" type="search" placeholder="Name, skill or tool" />
+        </label>
+        <label class="np-field">
+          <span class="np-field__label">Category</span>
+          <select id="projectTagFilter">
+            <option value="all">All categories</option>
+            <option value="web">Web</option>
+            <option value="backend">Backend</option>
+            <option value="ai">AI and assistants</option>
+            <option value="networking">Networking</option>
+          </select>
+        </label>
+        <p class="np-filters__count" id="projectCount" role="status" aria-live="polite"></p>
+      </div>
 
-        <section class="project-list">
-          <article class="project-entry">
-            <div>
-              <p class="meta-card__label">Project 01</p>
-              <h2>Course Tracker</h2>
-              <p>
-                A planning tool concept for keeping track of assignments,
-                deadlines, and class priorities. This project is useful for
-                showing front-end structure, interface thinking, and basic
-                application logic.
-              </p>
-            </div>
-            <div class="project-entry__meta">
-              <p class="project-entry__label">Stack</p>
-              <p class="project-entry__stack">HTML, CSS, JavaScript</p>
-              <p class="project-entry__label">Focus</p>
-              <p>Responsive layout, interaction design, and clean structure.</p>
-            </div>
-          </article>
+      <div id="projectDirectory" class="np-grid np-grid--two"></div>
 
-          <article class="project-entry">
-            <div>
-              <p class="meta-card__label">Project 02</p>
-              <h2>System Dashboard Concept</h2>
-              <p>
-                A dashboard-style interface focused on presenting technical data
-                clearly. It works well as a portfolio piece because it combines
-                organization, UI thinking, and an IT-oriented presentation style.
-              </p>
-            </div>
-            <div class="project-entry__meta">
-              <p class="project-entry__label">Stack</p>
-              <p class="project-entry__stack">HTML, CSS, JavaScript</p>
-              <p class="project-entry__label">Focus</p>
-              <p>Data display, layout hierarchy, and dashboard styling.</p>
-            </div>
-          </article>
+    </main>
 
-          <article class="project-entry">
-            <div>
-              <p class="meta-card__label">Project 03</p>
-              <h2>Personal Portfolio Website</h2>
-              <p>
-                The site you are on now is also one of the projects. It shows
-                layout work, front-end styling, multi-page navigation, and how I
-                present my technical background online.
-              </p>
-            </div>
-            <div class="project-entry__meta">
-              <p class="project-entry__label">Stack</p>
-              <p class="project-entry__stack">HTML, CSS, JavaScript</p>
-              <p class="project-entry__label">Focus</p>
-              <p>Portfolio structure, page design, and content organization.</p>
-            </div>
-          </article>
-        </section>
+    <footer class="np-wrap np-footer">
+      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+      <nav aria-label="Elsewhere">
+        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
+        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </footer>
 
-        <section class="subpage-grid">
-          <article class="subpage-panel">
-            <p class="meta-card__label">Next Step</p>
-            <h2>What to add next</h2>
-            <p>
-              The next improvement is replacing these project placeholders with
-              your real GitHub repos, screenshots, live demos, and short
-              explanations of what you built and learned.
-            </p>
-          </article>
+    <script>
+      // Phone menu: below 860px the nav stays hidden until this button opens it.
+      const menuBtn = document.querySelector(".np-menu-btn");
+      menuBtn.addEventListener("click", () => {
+        const open = document.getElementById("site-nav").classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
 
-          <article class="subpage-panel">
-            <p class="meta-card__label">Why Projects Matter</p>
-            <h2>What this page should prove</h2>
-            <p>
-              Recruiters and instructors should be able to see the problem, the
-              tools you used, and the specific work you contributed without
-              guessing.
-            </p>
-          </article>
-        </section>
+      // Project directory: cards are rendered from this list and filtered by search text and category.
+      const projects = [
+        {
+          color: "", kind: "Desktop AI assistant · v1.0.0", name: "Jarvis", href: "jarvis.html",
+          text: "A local Windows assistant I keep building on: wake word, speech recognition, memory, reminders and desktop automation in one system. 67 tools, about 50,900 lines of C#.",
+          tags: ["C#", ".NET 8", "LM Studio"], cats: ["ai", "desktop", "dotnet"],
+          shot: { src: "screenshots/jarvis-operations-surface.jpg", alt: "Jarvis operations surface with the live response stream, microphone levels and controls", width: 1362, height: 731 },
+        },
+        {
+          color: "violet", kind: "AI team lead · Chrome extension", name: "Matchob", href: "matchob.html",
+          text: "A team-built Chrome extension that tailors a resume to a job posting. I lead the AI team, which matches each requirement to the resume and checks that every suggestion stays true to it.",
+          tags: ["Python", "Amazon Bedrock", "TypeScript"], cats: ["ai", "backend", "web"],
+        },
+        {
+          color: "blue", kind: "Backend API", name: "Help Desk Sim", href: "helpdesk-sim.html",
+          text: "Ticket workflows, SLA timers that skip nights and weekends, staff sign-in and a full audit trail.",
+          tags: ["ASP.NET Core", "C#", ".NET 8"], cats: ["backend", "security", "dotnet"],
+        },
+        {
+          color: "green", kind: "Networking", name: "LanSentinel", href: "lansentinel.html",
+          text: "Scans a local subnet and reports each device's IP address, hostname, online status and response time.",
+          tags: ["Java", "Networking APIs", "Subnet scanning"], cats: ["networking", "backend", "java"],
+        },
+        {
+          color: "yellow", kind: "Web", name: "Portfolio Website", href: "portfolio-website.html",
+          text: "This site: a multi-page portfolio with a searchable project directory, kept current as school and work change.",
+          tags: ["HTML", "CSS", "JavaScript"], cats: ["web", "frontend", "javascript"],
+        },
+      ];
 
-        <footer class="site-footer">
-          <p class="site-footer__note">
-            Built to showcase programming projects, technical coursework, and
-            hands-on IT experience.
-          </p>
-          <div class="site-footer__emails">
-            <a class="site-footer__mail" href="mailto:Nzr25@fsu.edu"
-              >Nzr25@fsu.edu</a
-            >
-            <a
-              class="site-footer__mail"
-              href="mailto:noah.rohlinger40@gmail.com"
-              >noah.rohlinger40@gmail.com</a
-            >
-          </div>
-          <a class="site-footer__top" href="#top">Back to top</a>
-        </footer>
-      </main>
-    </div>
+      const directory = document.getElementById("projectDirectory");
+      const search = document.getElementById("projectSearch");
+      const category = document.getElementById("projectTagFilter");
+      const count = document.getElementById("projectCount");
 
-    <script src="script.js"></script>
+      function buildCard(p) {
+        const a = document.createElement("a");
+        a.className = "np-card np-project" + (p.color ? " np-project--" + p.color : "") + (p.shot ? " np-project--wide" : "");
+        a.href = p.href;
+        a.dataset.tags = p.cats.join(",");
+        const info = `
+          <p class="np-project__kind"></p>
+          <h3 class="np-project__name"></h3>
+          <p></p>
+          <ul class="np-tags"></ul>
+          <span class="np-project__more">Open project</span>`;
+        if (p.shot) {
+          a.innerHTML = `<div class="np-project__body">${info}</div><img class="np-project__shot" loading="lazy" />`;
+          Object.assign(a.querySelector("img"), p.shot);
+        } else {
+          a.innerHTML = info;
+        }
+        a.querySelector(".np-project__kind").textContent = p.kind;
+        a.querySelector(".np-project__name").textContent = p.name;
+        a.querySelector("p:not(.np-project__kind)").textContent = p.text;
+        p.tags.forEach((t) => {
+          const li = document.createElement("li");
+          li.className = "np-tag";
+          li.textContent = t;
+          a.querySelector(".np-tags").appendChild(li);
+        });
+        return a;
+      }
+
+      function updateFilter() {
+        const query = search.value.trim().toLowerCase();
+        let visible = 0;
+        directory.querySelectorAll(".np-project").forEach((card) => {
+          const cats = card.dataset.tags.toLowerCase().split(",");
+          const matchesQuery = !query || card.textContent.toLowerCase().includes(query) || cats.some((c) => c.includes(query));
+          const matchesTag = category.value === "all" || cats.includes(category.value);
+          const match = matchesQuery && matchesTag;
+          card.style.display = match ? "" : "none";
+          if (match) visible += 1;
+        });
+        count.textContent = `Showing ${visible} project${visible === 1 ? "" : "s"}`;
+      }
+
+      projects.forEach((p) => directory.appendChild(buildCard(p)));
+      search.addEventListener("input", updateFilter);
+      category.addEventListener("change", updateFilter);
+      updateFilter();
+    </script>
   </body>
 </html>

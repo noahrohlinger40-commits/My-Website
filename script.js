@@ -1,9 +1,52 @@
+// Grab the page elements this file enhances.
 const cards = document.querySelectorAll("[data-tilt-card]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const contactForm = document.querySelector("[data-contact-form]");
-const formStatus = document.querySelector("[data-form-status]");
-const contactRecipients = "noah.rohlinger40@gmail.com,Nzr25@fsu.edu";
 
+// Phone menu: below 1080px the stylesheet hides the nav until this button opens it.
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.getElementById("site-nav");
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const open = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+  });
+}
+
+// Section reveal animations with IntersectionObserver.
+const revealElements = document.querySelectorAll(".hero, .subpage-panel, .contact-section");
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealElements.forEach((el) => {
+  el.classList.add("reveal");
+  revealObserver.observe(el);
+});
+
+// Scroll-to-top quick action button.
+const scrollTopButton = document.createElement("button");
+scrollTopButton.className = "scroll-top";
+scrollTopButton.type = "button";
+scrollTopButton.setAttribute("aria-label", "Scroll to top");
+scrollTopButton.textContent = "↑";
+document.body.appendChild(scrollTopButton);
+
+const updateScrollTopVisibility = () => {
+  scrollTopButton.classList.toggle("visible", window.scrollY > 320);
+};
+
+window.addEventListener("scroll", updateScrollTopVisibility);
+scrollTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+updateScrollTopVisibility();
+
+// Only enable the hover tilt effect when the user has not requested reduced motion.
 if (!reduceMotion) {
   cards.forEach((card) => {
     card.addEventListener("pointermove", (event) => {
@@ -19,44 +62,5 @@ if (!reduceMotion) {
     card.addEventListener("pointerleave", () => {
       card.style.transform = "";
     });
-  });
-}
-
-if (contactForm instanceof HTMLFormElement) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const projectType = String(formData.get("projectType") || "").trim();
-    const timeline = String(formData.get("timeline") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    if (!name || !email || !projectType || !timeline || !message) {
-      if (formStatus) {
-        formStatus.textContent = "Please complete every field before sending.";
-      }
-      return;
-    }
-
-    const subject = encodeURIComponent(`${projectType} inquiry from ${name}`);
-    const body = encodeURIComponent(
-      [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Project type: ${projectType}`,
-        `Timeline: ${timeline}`,
-        "",
-        "Project details:",
-        message,
-      ].join("\n")
-    );
-
-    if (formStatus) {
-      formStatus.textContent = "Opening your email app...";
-    }
-
-    window.location.href = `mailto:${contactRecipients}?subject=${subject}&body=${body}`;
   });
 }

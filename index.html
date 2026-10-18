@@ -3,258 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Florida State University Information Technology student (4.0 GPA, B.S. expected May 2027) with experience in network troubleshooting, backend API development, and IT service workflows. Seeking a 2027 internship in IT support, infrastructure, or information security." />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="canonical" href="https://noahrohling.netlify.app/" />
+    <meta property="og:title" content="Noah Rohlinger | IT Portfolio" />
+    <meta property="og:description" content="Florida State University Information Technology student (4.0 GPA, B.S. expected May 2027) with experience in network troubleshooting, backend API development, and IT service workflows. Seeking a 2027 internship in IT support, infrastructure, or information security." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://noahrohling.netlify.app/" />
+    <meta property="og:image" content="https://noahrohling.netlify.app/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Noah Rohlinger | IT Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
+    <link rel="stylesheet" href="redesign.css" />
   </head>
-  <body>
-    <div class="page-shell">
-      <main class="portfolio-stage" id="top">
-        <header class="topbar">
-          <div class="brand-lockup">
-            <a class="brand" href="index.html">Noah Rohlinger</a>
-            <p class="brand-note">
-              FSU Information Technology student focused on software, web, and
-              technical problem solving.
-            </p>
-          </div>
+  <body class="np-page">
+    <a class="np-skip" href="#main-content">Skip to main content</a>
 
-          <nav class="main-nav" aria-label="Primary">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-          </nav>
+    <header class="np-header">
+      <div class="np-wrap np-header__inner">
+        <a class="np-brand" href="index.html">Noah Rohlinger</a>
+        <nav class="np-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      </div>
+    </header>
 
-          <a class="button button--ghost" href="contact.html">Contact Me</a>
-        </header>
-
-        <section class="hero" id="home">
-          <div class="marquee" aria-hidden="true">
-            <div class="marquee__track">
-              <span>CODE PROJECTS</span>
-              <span class="marquee__mark">*</span>
-              <span>CODE PROJECTS</span>
-              <span class="marquee__mark">*</span>
-              <span>CODE PROJECTS</span>
-              <span class="marquee__mark">*</span>
-              <span>CODE PROJECTS</span>
-              <span class="marquee__mark">*</span>
-              <span>CODE PROJECTS</span>
-              <span class="marquee__mark">*</span>
-              <span>CODE PROJECTS</span>
-            </div>
-          </div>
-
-          <div class="hero__content" id="about">
-            <div class="hero__copy">
-              <p class="eyebrow">Software and IT Portfolio</p>
-              <h1>Code, systems, and projects that show how I solve problems.</h1>
-              <p class="hero__lede">
-                This portfolio highlights projects I have built across web
-                development, programming, and technical coursework as I grow my
-                skills in Information Technology.
-              </p>
-              <p class="hero__body">
-                The goal is to show practical work: writing code, building
-                interfaces, debugging issues, and turning ideas into projects
-                that actually work.
-              </p>
-              <div class="hero__actions">
-                <a
-                  class="button button--solid"
-                  href="mailto:noah.rohlinger40@gmail.com,Nzr25@fsu.edu"
-                >
-                  Email Me</a
-                >
-                <a class="button button--text" href="projects.html">Explore Projects</a>
-              </div>
-            </div>
-
-            <aside class="hero__meta" id="services">
-              <div class="meta-card">
-                <p class="meta-card__label">Core Areas</p>
-                <p>Web development</p>
-                <p>Programming projects</p>
-                <p>IT systems and coursework</p>
-              </div>
-              <div class="meta-card">
-                <p class="meta-card__label">What I Bring</p>
-                <p>Clear problem solving</p>
-                <p>Usable interfaces</p>
-                <p>Consistent learning</p>
-              </div>
-            </aside>
-          </div>
-        </section>
-
-        <section class="gallery" id="work">
-          <article class="project-card project-card--jet" data-tilt-card>
-            <div class="project-card__chrome">
-              <span>Featured build</span>
-              <span>Responsive web app</span>
-              <span>Frontend development</span>
-            </div>
-            <div class="project-window">
-              <div class="project-window__top">
-                <span class="project-window__brand">PROJECT 01</span>
-                <div class="project-window__nav">
-                  <span>HTML/CSS</span>
-                  <span>JavaScript</span>
-                  <span>User interface</span>
-                </div>
-                <span class="project-window__action">Project repo</span>
-              </div>
-              <div class="project-window__title">Course Tracker</div>
-              <div class="airstrip-scene" aria-hidden="true">
-                <div class="jet">
-                  <span class="jet__body"></span>
-                  <span class="jet__wing"></span>
-                  <span class="jet__tail"></span>
-                  <span class="jet__engine jet__engine--front"></span>
-                  <span class="jet__engine jet__engine--rear"></span>
-                  <span class="jet__wheel jet__wheel--front"></span>
-                  <span class="jet__wheel jet__wheel--rear"></span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card project-card--portrait" data-tilt-card>
-            <div class="project-card__chrome">
-              <span>Project 02</span>
-              <span>System dashboard</span>
-              <span>Data visualization</span>
-            </div>
-            <div class="portrait-scene" aria-hidden="true">
-              <div class="portrait-glow"></div>
-              <div class="portrait-head"></div>
-              <div class="portrait-neck"></div>
-              <div class="portrait-veil"></div>
-            </div>
-          </article>
-        </section>
-
-        <section class="contact-section" id="contact">
-          <div class="contact-section__intro">
-            <p class="eyebrow">Contact</p>
-            <h2>Reach out about internships, projects, or technical collaboration.</h2>
-            <p class="contact-section__lede">
-              Use the form to ask about my projects, discuss internship
-              opportunities, or connect about programming and IT work.
-              Submitting opens a pre-filled email draft, which keeps the site
-              simple and easy to maintain.
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-details__card">
-                <p class="contact-details__label">FSU Email</p>
-                <a href="mailto:Nzr25@fsu.edu">Nzr25@fsu.edu</a>
-              </div>
-              <div class="contact-details__card">
-                <p class="contact-details__label">Personal Email</p>
-                <a href="mailto:noah.rohlinger40@gmail.com"
-                  >noah.rohlinger40@gmail.com</a
-                >
-              </div>
-              <div class="contact-details__card">
-                <p class="contact-details__label">Based In</p>
-                <p>Tallahassee, Florida</p>
-              </div>
-              <div class="contact-details__card">
-                <p class="contact-details__label">Response Time</p>
-                <p>Usually within 1 to 2 business days</p>
-              </div>
-            </div>
-          </div>
-
-          <form class="contact-form" data-contact-form>
-            <div class="contact-form__grid">
-              <label class="field">
-                <span class="field__label">Name</span>
-                <input type="text" name="name" placeholder="Your name" required />
-              </label>
-
-              <label class="field">
-                <span class="field__label">Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </label>
-
-              <label class="field">
-                <span class="field__label">Reason For Reaching Out</span>
-                <select name="projectType" required>
-                  <option value="">Choose one</option>
-                  <option>Internship opportunity</option>
-                  <option>Project collaboration</option>
-                  <option>Portfolio feedback</option>
-                  <option>Technical question</option>
-                </select>
-              </label>
-
-              <label class="field">
-                <span class="field__label">Priority</span>
-                <select name="timeline" required>
-                  <option value="">Choose one</option>
-                  <option>This week</option>
-                  <option>This month</option>
-                  <option>No rush</option>
-                  <option>Just saying hello</option>
-                </select>
-              </label>
-            </div>
-
-            <label class="field field--full">
-              <span class="field__label">Message</span>
-              <textarea
-                name="message"
-                rows="7"
-                placeholder="Ask about a project, share an opportunity, or tell me which part of the portfolio caught your attention."
-                required
-              ></textarea>
-            </label>
-
-            <div class="contact-form__footer">
-              <button class="button button--solid" type="submit">Send Message</button>
-              <p class="contact-form__note">
-                Your email app will open with the message pre-filled.
-              </p>
-            </div>
-
-            <p class="contact-form__status" data-form-status aria-live="polite"></p>
-          </form>
-        </section>
-
-        <footer class="site-footer">
-          <p class="site-footer__note">
-            Built to showcase programming projects, technical coursework, and
-            hands-on IT experience.
+    <main class="np-wrap" id="main-content">
+      <!-- Hero: who Noah is and what he wants, all on the first screen. -->
+      <section class="np-hero">
+        <div>
+          <p class="np-eyebrow">Florida State University &middot; Information Technology</p>
+          <h1>IT student building toward a 2027 internship</h1>
+          <p class="np-hero__lede">
+            I study Information Technology at Florida State with a 4.0 GPA,
+            graduating May 2027. I learn by building: a local AI desktop
+            assistant, a help desk backend and a network scanner. I am looking
+            for an internship in IT support, infrastructure or information
+            security.
           </p>
-          <div class="site-footer__emails">
-            <a class="site-footer__mail" href="mailto:Nzr25@fsu.edu"
-              >Nzr25@fsu.edu</a
-            >
-            <a
-              class="site-footer__mail"
-              href="mailto:noah.rohlinger40@gmail.com"
-              >noah.rohlinger40@gmail.com</a
-            >
+          <div class="np-hero__actions">
+            <a class="np-btn np-btn--primary" href="#work">See projects</a>
+            <a class="np-btn np-btn--ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">Download resume</a>
+            <a class="np-link" href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="np-link" href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
-          <a class="site-footer__top" href="#top">Back to top</a>
-        </footer>
-      </main>
-    </div>
+        </div>
+        <div class="np-hero__photo np-photo np-photo--fade">
+          <img src="photos/noah-presenting.jpg" alt="Noah Rohlinger presenting Jarvis to the CCI Leadership Board" width="640" height="800" style="object-position: 55% 25%" />
+        </div>
+      </section>
 
-    <script src="script.js"></script>
+      <!-- Quick facts: one or two lines each; the full story lives on the About page. -->
+      <section class="np-section" aria-label="Quick facts">
+        <dl class="np-facts">
+          <div>
+            <dt>Education</dt>
+            <dd>B.S. Information Technology, Florida State<span>4.0 GPA &middot; President's List &middot; May 2027</span></dd>
+          </div>
+          <div>
+            <dt>Experience</dt>
+            <dd>Communications Associate, FSU Geography &amp; Demography<span>FSUshadow with Florida Blue Information Security, May 2026</span></dd>
+          </div>
+          <div>
+            <dt>Looking for</dt>
+            <dd>A 2027 internship in IT support, infrastructure or security<span>Open to relocating anywhere in the US, plus hybrid or remote</span></dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Featured projects: Jarvis leads with a screenshot; each card uses its project colour class. -->
+      <section class="np-section" id="work">
+        <div class="np-section__head">
+          <div>
+            <p class="np-eyebrow">Selected work</p>
+            <h2>Projects</h2>
+          </div>
+          <a class="np-link" href="projects.html">All projects</a>
+        </div>
+        <div class="np-grid">
+          <a class="np-card np-project np-project--wide" href="jarvis.html">
+            <div class="np-project__body">
+              <p class="np-project__kind">Desktop AI assistant &middot; v1.0.0</p>
+              <h3 class="np-project__name">Jarvis</h3>
+              <p>A local Windows assistant I keep building on: wake word, speech recognition, memory, reminders and desktop automation in one system. 67 tools, about 50,900 lines of C#.</p>
+              <ul class="np-tags"><li class="np-tag">C#</li><li class="np-tag">.NET 8</li><li class="np-tag">LM Studio</li></ul>
+              <span class="np-project__more">Open project</span>
+            </div>
+            <img class="np-project__shot" src="screenshots/jarvis-operations-surface.jpg" alt="Jarvis operations surface with the live response stream, microphone levels and controls" width="1362" height="731" loading="lazy" />
+          </a>
+          <a class="np-card np-project np-project--blue" href="helpdesk-sim.html">
+            <p class="np-project__kind">Backend API</p>
+            <h3 class="np-project__name">Help Desk Sim</h3>
+            <p>Ticket workflows, SLA timers that skip nights and weekends, staff sign-in and a full audit trail.</p>
+            <ul class="np-tags"><li class="np-tag">ASP.NET Core</li><li class="np-tag">C#</li><li class="np-tag">.NET 8</li></ul>
+            <span class="np-project__more">Open project</span>
+          </a>
+          <a class="np-card np-project np-project--green" href="lansentinel.html">
+            <p class="np-project__kind">Networking</p>
+            <h3 class="np-project__name">LanSentinel</h3>
+            <p>Scans a local subnet and reports each device's IP address, hostname, online status and response time.</p>
+            <ul class="np-tags"><li class="np-tag">Java</li><li class="np-tag">Networking APIs</li><li class="np-tag">Subnet scanning</li></ul>
+            <span class="np-project__more">Open project</span>
+          </a>
+          <a class="np-card np-project np-project--violet" href="matchob.html">
+            <p class="np-project__kind">AI team lead &middot; Chrome extension</p>
+            <h3 class="np-project__name">Matchob</h3>
+            <p>A team-built Chrome extension that tailors a resume to a job posting. I lead the AI team, which matches each requirement to the resume and checks that every suggestion stays true to it.</p>
+            <ul class="np-tags"><li class="np-tag">Python</li><li class="np-tag">Amazon Bedrock</li><li class="np-tag">TypeScript</li></ul>
+            <span class="np-project__more">Open project</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- One contact band; the full form stays on contact.html. -->
+      <section class="np-section">
+        <div class="np-cta">
+          <div>
+            <h2>Let's talk</h2>
+            <p>Hiring for a 2027 IT internship, or want to ask about a project? Email is the fastest way to reach me.</p>
+          </div>
+          <div class="np-cta__actions">
+            <a class="np-btn np-btn--primary" href="mailto:noah.rohlinger40@gmail.com">Email me</a>
+            <a class="np-btn np-btn--ghost" href="contact.html">Contact form</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="np-wrap np-footer">
+      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+      <nav aria-label="Elsewhere">
+        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
+        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </footer>
+
+    <script>
+      // Phone menu: below 860px the nav stays hidden until this button opens it.
+      const menuBtn = document.querySelector(".np-menu-btn");
+      menuBtn.addEventListener("click", () => {
+        const open = document.getElementById("site-nav").classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+    </script>
   </body>
 </html>

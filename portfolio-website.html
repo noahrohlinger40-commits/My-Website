@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How this portfolio site was built: multi-page HTML, CSS, and JavaScript with responsive layout and lightweight interaction." />
+    <link rel="canonical" href="https://noahrohling.netlify.app/portfolio-website.html" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:title" content="Noah Rohlinger | Portfolio Website" />
+    <meta property="og:description" content="How this portfolio site was built: multi-page HTML, CSS, and JavaScript with responsive layout and lightweight interaction." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://noahrohling.netlify.app/portfolio-website.html" />
+    <meta property="og:image" content="https://noahrohling.netlify.app/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Noah Rohlinger | Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
+    <link rel="stylesheet" href="redesign.css" />
+  </head>
+  <body class="np-page">
+    <a class="np-skip" href="#main-content">Skip to main content</a>
+
+    <header class="np-header">
+      <div class="np-wrap np-header__inner">
+        <a class="np-brand" href="index.html">Noah Rohlinger</a>
+        <nav class="np-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <main class="np-wrap" id="main-content">
+      <section class="np-page-head">
+        <p class="np-eyebrow">Web</p>
+        <h1>Portfolio Website</h1>
+        <p class="np-page-head__lede">This site is both a front-end project and the live place where I present my background, projects, and contact information.</p>
+        <div class="np-page-head__actions">
+          <a class="np-btn np-btn--primary" href="https://github.com/noahrohlinger40-commits/My-Website" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a class="np-link" href="projects.html">All projects</a>
+        </div>
+      </section>
+
+      <section class="np-section" aria-label="Project facts">
+        <dl class="np-facts">
+          <div>
+            <dt>Stack</dt>
+            <dd>HTML, CSS, JavaScript</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Front-end structure, responsive presentation, content updates, and lightweight interaction.</dd>
+          </div>
+          <div>
+            <dt>Current state</dt>
+            <dd>Active live portfolio with current education, revised page structure, updated project descriptions, and ongoing front-end iteration.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Overview</h2>
+        </div>
+        <p class="np-prose">I built this portfolio as a live multi-page front-end site with shared styling, project detail pages, and lightweight JavaScript interactions. Its job is to present my background in a more professional way while also acting as an ongoing web project that I can keep refining.</p>
+        <ul class="np-points">
+          <li><strong>Shared front-end structure</strong> Uses consistent layouts, navigation, visual styling, and reusable sections across the homepage, About, Skills, Projects, Contact, and project detail pages. In October 2026 I rebuilt it on my own design system, so every page draws from one shared set of colours, type and components.</li>
+          <li><strong>Interactive UI work</strong> Includes a featured-project homepage section, searchable project directory, certificate cards on the About page, contact form flow that opens Gmail or a mail app, and a phone menu that folds the page links into one button.</li>
+          <li><strong>Content organization and iteration</strong> The site keeps changing as my projects, school background, and presentation choices get updated, so it also shows how I revise content and improve structure over time.</li>
+        </ul>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Current build highlights</h2>
+        </div>
+        <ul class="np-points">
+          <li><strong>Homepage</strong> Uses a featured-project grid to surface the builds I want employers to see first.</li>
+          <li><strong>About and Skills pages</strong> Breaks the site into focused sections so background, certificates, and strengths are easier to scan.</li>
+          <li><strong>Projects directory</strong> Uses JavaScript-rendered project cards with search and category filters for quicker browsing.</li>
+        </ul>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Where it can grow next</h2>
+        </div>
+        <p class="np-prose">The clearest next improvements are adding screenshots to more project pages, expanding project-specific visuals, and continuing to sharpen the writing as the portfolio grows.</p>
+      </section>
+
+      <section class="np-section">
+        <div class="np-section__head">
+          <h2>Why it matters</h2>
+        </div>
+        <p class="np-prose">This project matters because it is not only something I built. It is also the main surface employers use to evaluate how I present work, organize information, and keep a live project updated as my background changes.</p>
+      </section>
+
+      <section class="np-section">
+        <div class="np-cta">
+          <div>
+            <h2>Let's talk</h2>
+            <p>Hiring for a 2027 IT internship, or want to ask about a project? Email is the fastest way to reach me.</p>
+          </div>
+          <div class="np-cta__actions">
+            <a class="np-btn np-btn--primary" href="mailto:noah.rohlinger40@gmail.com">Email me</a>
+            <a class="np-btn np-btn--ghost" href="contact.html">Contact form</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="np-wrap np-footer">
+      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+      <nav aria-label="Elsewhere">
+        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
+        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </footer>
+
+    <script>
+      // Phone menu: below 860px the nav stays hidden until this button opens it.
+      const menuBtn = document.querySelector(".np-menu-btn");
+      menuBtn.addEventListener("click", () => {
+        const open = document.getElementById("site-nav").classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+    </script>
+  </body>
+</html>
