@@ -1,130 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Help Desk Sim: an ASP.NET Core and C# API modeling help desk ticket workflows, role-based authentication, SLA targets, and audit history." />
-    <link rel="canonical" href="https://noahrohling.netlify.app/helpdesk-sim.html" />
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <meta property="og:title" content="Noah Rohlinger | Help Desk Sim" />
-    <meta property="og:description" content="Help Desk Sim: an ASP.NET Core and C# API modeling help desk ticket workflows, role-based authentication, SLA targets, and audit history." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://noahrohling.netlify.app/helpdesk-sim.html" />
-    <meta property="og:image" content="https://noahrohling.netlify.app/social-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noah Rohlinger | Help Desk Sim</title>
+<meta name="description" content="Help Desk Sim: an ASP.NET Core and C# API modeling help desk ticket workflows, role-based authentication, SLA targets, and audit history.">
+<link rel="canonical" href="https://noahrohling.netlify.app/helpdesk-sim.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Noah Rohlinger | Help Desk Sim">
+<meta property="og:description" content="Help Desk Sim: an ASP.NET Core and C# API modeling help desk ticket workflows, role-based authentication, SLA targets, and audit history.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://noahrohling.netlify.app/helpdesk-sim.html">
+<meta property="og:image" content="https://noahrohling.netlify.app/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap bar"><a class="brand" href="index.html">noah_rohlinger</a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="top" id="nav" aria-label="Primary"><a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="projects.html" aria-current="true">Projects</a><a href="contact.html">Contact</a><a class="res" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav></div></header>
+<main id="main">
+<section class="head"><div class="wrap">
+ <p class="lbl"><span class="mk mk-p"></span>&nbsp; Backend API &middot; 2026</p>
+ <h1>Help Desk Sim</h1>
+ <p class="lede">Help Desk Sim is a student-built ASP.NET Core API project that explores help desk ticket workflows, technician notes, SLA tracking, authentication, audit history, and outbound email notifications.</p>
+ <div class="go"><a class="dl" href="https://github.com/noahrohlinger40-commits/Help-Desk-Sim" target="_blank" rel="noopener noreferrer">View on GitHub</a><a href="projects.html">All projects</a></div>
+ <dl class="kv" aria-label="Project facts">
+  <dt>Stack</dt><dd>ASP.NET Core, C#, .NET 8, JSON persistence</dd>
+  <dt>Current state</dt><dd>Current student backend build with setup-admin bootstrapping, technician and admin roles, notification tracking, and audit exports already working.</dd>
+  <dt>Source code</dt><dd><a href="https://github.com/noahrohlinger40-commits/Help-Desk-Sim" target="_blank" rel="noopener noreferrer">Help-Desk-Sim on GitHub</a></dd>
+ </dl>
+</div></section>
 
-    <title>Noah Rohlinger | Help Desk Sim</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
-    <link rel="stylesheet" href="redesign.css" />
-  </head>
-  <body class="np-page">
-    <a class="np-skip" href="#main-content">Skip to main content</a>
+<section class="sec" id="overview" aria-labelledby="ov-h"><div class="wrap">
+ <h2 id="ov-h">Overview</h2>
+ <p class="prose">I built Help Desk Sim to practice backend design in a more realistic scenario than a small CRUD exercise. It models tickets, technician notes, first-response and resolution SLAs, user roles, session history, outbound email events, and audit trails while still being simple enough to run locally without a database install.</p>
+ <ul class="rows pts">
+  <li><h3>ASP.NET Core API structure</h3><p>Organizes authentication, user management, ticket routes, dashboard metrics, lookups, notification history, and webhook callbacks in one backend-focused project.</p></li>
+  <li><h3>Authentication and role handling</h3><p>Uses access tokens, refresh tokens, role-based protection, password reset flows, password change support, and active session plus revocation history.</p></li>
+  <li><h3>Workflow thinking</h3><p>Splits first-response and resolution SLA targets, records audit history, retries failed notifications, and exports filtered audit results as CSV for review.</p></li>
+ </ul>
+ <h3 class="sub">The flow</h3>
+ <ol class="flow"><li>Staff sign-in</li><li>Ticket + notes</li><li>SLA targets</li><li>Audit history</li><li>Email notification</li><li>CSV export</li></ol>
+</div></section>
 
-    <header class="np-header">
-      <div class="np-wrap np-header__inner">
-        <a class="np-brand" href="index.html">Noah Rohlinger</a>
-        <nav class="np-nav" id="site-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html" aria-current="page">Projects</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
-      </div>
-    </header>
+<section class="sec" aria-labelledby="s0-h"><div class="wrap">
+ <h2 id="s0-h">Where it can grow next</h2>
+ <p class="prose">The clearest next improvements are moving persistence to SQLite or SQL Server, adding a lightweight frontend dashboard, and extending reporting plus notification integrations.</p>
+</div></section>
 
-    <main class="np-wrap" id="main-content">
-      <section class="np-page-head">
-        <p class="np-eyebrow">Backend API &middot; 2026</p>
-        <h1>Help Desk Sim</h1>
-        <p class="np-page-head__lede">Help Desk Sim is a student-built ASP.NET Core API project that explores help desk ticket workflows, technician notes, SLA tracking, authentication, audit history, and outbound email notifications.</p>
-        <div class="np-page-head__actions">
-          <a class="np-btn np-btn--primary" href="https://github.com/noahrohlinger40-commits/Help-Desk-Sim" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-          <a class="np-link" href="projects.html">All projects</a>
-        </div>
-      </section>
+<section class="sec" aria-labelledby="s1-h"><div class="wrap">
+ <h2 id="s1-h">Why it matters</h2>
+ <p class="prose">Help Desk Sim shows that I can move beyond very small assignments and build something with multiple connected backend concerns. It gives employers a more realistic example of how I approach API structure and feature growth as a student developer.</p>
+</div></section>
 
-      <section class="np-section" aria-label="Project facts">
-        <dl class="np-facts">
-          <div>
-            <dt>Stack</dt>
-            <dd>ASP.NET Core, C#, .NET 8, JSON persistence</dd>
-          </div>
-          <div>
-            <dt>Current state</dt>
-            <dd>Current student backend build with setup-admin bootstrapping, technician and admin roles, notification tracking, and audit exports already working.</dd>
-          </div>
-          <div>
-            <dt>Source code</dt>
-            <dd><a class="np-link" href="https://github.com/noahrohlinger40-commits/Help-Desk-Sim" target="_blank" rel="noopener noreferrer">Help-Desk-Sim on GitHub</a></dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Overview</h2>
-        </div>
-        <p class="np-prose">I built Help Desk Sim to practice backend design in a more realistic scenario than a small CRUD exercise. It models tickets, technician notes, first-response and resolution SLAs, user roles, session history, outbound email events, and audit trails while still being simple enough to run locally without a database install.</p>
-        <ul class="np-points">
-          <li><strong>ASP.NET Core API structure</strong> Organizes authentication, user management, ticket routes, dashboard metrics, lookups, notification history, and webhook callbacks in one backend-focused project.</li>
-          <li><strong>Authentication and role handling</strong> Uses access tokens, refresh tokens, role-based protection, password reset flows, password change support, and active session plus revocation history.</li>
-          <li><strong>Workflow thinking</strong> Splits first-response and resolution SLA targets, records audit history, retries failed notifications, and exports filtered audit results as CSV for review.</li>
-        </ul>
-      </section>
-
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Where it can grow next</h2>
-        </div>
-        <p class="np-prose">The clearest next improvements are moving persistence to SQLite or SQL Server, adding a lightweight frontend dashboard, and extending reporting plus notification integrations.</p>
-      </section>
-
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Why it matters</h2>
-        </div>
-        <p class="np-prose">Help Desk Sim shows that I can move beyond very small assignments and build something with multiple connected backend concerns. It gives employers a more realistic example of how I approach API structure and feature growth as a student developer.</p>
-      </section>
-
-      <section class="np-section">
-        <div class="np-cta">
-          <div>
-            <h2>Let's talk</h2>
-            <p>Hiring for a 2027 IT internship, or want to ask about a project? Email is the fastest way to reach me.</p>
-          </div>
-          <div class="np-cta__actions">
-            <a class="np-btn np-btn--primary" href="mailto:noah.rohlinger40@gmail.com">Email me</a>
-            <a class="np-btn np-btn--ghost" href="contact.html">Contact form</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="np-wrap np-footer">
-      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
-      <nav aria-label="Elsewhere">
-        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
-        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </nav>
-    </footer>
-
-    <script>
-      // Phone menu: below 860px the nav stays hidden until this button opens it.
-      const menuBtn = document.querySelector(".np-menu-btn");
-      menuBtn.addEventListener("click", () => {
-        const open = document.getElementById("site-nav").classList.toggle("is-open");
-        menuBtn.setAttribute("aria-expanded", String(open));
-      });
-    </script>
-  </body>
+</main>
+<footer class="site"><div class="wrap"><span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+<nav aria-label="Elsewhere"><a href="mailto:noah.rohlinger40@gmail.com">Email</a><a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav></div></footer>
+<script>
+var b=document.querySelector('.menu'),n=document.getElementById('nav');
+b.onclick=function(){b.setAttribute('aria-expanded',n.classList.toggle('open'))};
+addEventListener('keydown',function(e){if(e.key=='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}});
+</script>
+</body>
 </html>

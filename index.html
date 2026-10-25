@@ -1,163 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Florida State University Information Technology student (4.0 GPA, B.S. expected May 2027) with experience in network troubleshooting, backend API development, and IT service workflows. Seeking a 2027 internship in IT support, infrastructure, or information security." />
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="canonical" href="https://noahrohling.netlify.app/" />
-    <meta property="og:title" content="Noah Rohlinger | IT Portfolio" />
-    <meta property="og:description" content="Florida State University Information Technology student (4.0 GPA, B.S. expected May 2027) with experience in network troubleshooting, backend API development, and IT service workflows. Seeking a 2027 internship in IT support, infrastructure, or information security." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://noahrohling.netlify.app/" />
-    <meta property="og:image" content="https://noahrohling.netlify.app/social-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Noah Rohlinger | IT Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
-    <link rel="stylesheet" href="redesign.css" />
-  </head>
-  <body class="np-page">
-    <a class="np-skip" href="#main-content">Skip to main content</a>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noah Rohlinger | IT Portfolio</title>
+<meta name="description" content="Florida State University Information Technology student (4.0 GPA, B.S. expected May 2027) with experience in network troubleshooting, backend API development, and IT service workflows. Seeking a 2027 internship in IT support, infrastructure, or information security.">
+<link rel="canonical" href="https://noahrohling.netlify.app/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Noah Rohlinger | IT Portfolio">
+<meta property="og:description" content="Florida State University Information Technology student (4.0 GPA, B.S. expected May 2027) with experience in network troubleshooting, backend API development, and IT service workflows. Seeking a 2027 internship in IT support, infrastructure, or information security.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://noahrohling.netlify.app/">
+<meta property="og:image" content="https://noahrohling.netlify.app/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+/* ---------- stage: stacked by default (phone, no JS) ---------- */
+.stage{background:radial-gradient(circle,var(--line) 1.2px,transparent 1.6px) 0 0/26px 26px;container-type:inline-size;display:flex;flex-direction:column;padding:34px 0 8px}
+.intro{order:2;margin-top:22px}
+.intro h1{font-size:clamp(30px,8vw,40px);line-height:1.06;margin-bottom:16px}
+.intro p{margin:0 0 12px;color:var(--mute);max-width:34em}
+.intro p.lead{color:var(--ink);font-size:18px}
+.intro .go{margin-top:18px}
+.core{order:1;margin:0 auto;--S:min(72cqw,270px);width:var(--S);text-align:center}
+.ph{position:relative;width:var(--S);aspect-ratio:1;overflow:hidden;
+ -webkit-mask-image:radial-gradient(circle closest-side,#000 64%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 64%,transparent 100%)}
+.ph img{position:absolute;display:block;max-width:none;width:calc(var(--S)*2.05);height:auto;left:calc(var(--S)*-.97);top:calc(var(--S)*-.02);filter:var(--ph-filter)}
+.core figcaption{margin-top:-6px;font:500 12.5px var(--mono);color:var(--mute)}
+.map,.card,.legend,.node{display:none}
+.list{order:3;margin-top:34px}
+.list h2{font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:30px 0 4px}
+.list ul{list-style:none;margin:0;padding:0}
+.list li{padding:16px 0;border-top:1px solid var(--line)}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list a{font-weight:800;font-size:21px;line-height:1.2;text-decoration:none;letter-spacing:-.01em}
+.list a::after{content:" \2192";color:var(--acc);font-weight:500}
+.list a:hover{color:var(--acc)}
+.list .k{display:block;font:400 12.5px var(--mono);color:var(--mute);margin:2px 0 6px}
+.list p{margin:0;color:var(--mute);font-size:16px}
+.list .tags{margin-top:6px;font:400 12.5px var(--mono)}
 
-    <header class="np-header">
-      <div class="np-wrap np-header__inner">
-        <a class="np-brand" href="index.html">Noah Rohlinger</a>
-        <nav class="np-nav" id="site-nav" aria-label="Primary">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
-      </div>
-    </header>
+/* ---------- desktop map ---------- */
+@media (min-width:1100px){
+ .js .stage{position:relative;display:block;aspect-ratio:1200/780;padding:0;margin-top:8px}
+ .js .intro{position:absolute;left:0;top:26px;width:39%;margin:0;z-index:3}
+ .js .intro h1{font-size:clamp(26px,2.6vw,34px)}
+ .js .intro p{font-size:16px;margin-bottom:8px}.js .intro p.lead{font-size:17px}
+ .js .core{position:absolute;left:50%;top:calc(420/7.8*1%);translate:-50% -50%;--S:min(29cqw,350px);margin:0;z-index:2}
+ .js .core figcaption{position:absolute;left:50%;translate:-50% 0;top:100%;margin:0;white-space:nowrap}
+ .js .list{display:none}
+ .js .node{display:flex}
+ .js .map{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}
+ .js .legend{display:flex;gap:18px;position:absolute;left:0;bottom:6px;font:500 12px var(--mono);color:var(--mute);z-index:3}
+ .js .card{display:block;position:absolute;right:0;top:34px;width:26%;min-height:210px;padding:2px 0 0 18px;border-left:2px solid var(--acc);z-index:3}
+}
+.legend .mk{margin-right:7px}
+.map .ring{fill:none;stroke:var(--line);stroke-width:1.2;stroke-dasharray:3 7}
+.map .lk{fill:none;stroke:var(--wire);stroke-width:1.3;vector-effect:non-scaling-stroke;transition:stroke .2s,opacity .2s}
+.map .x{stroke-dasharray:2 5}
+.has-on .lk{opacity:.3}.has-on .lk.on{opacity:1;stroke:var(--acc);stroke-width:2.4;stroke-dasharray:none}
+.pkt{fill:var(--acc);opacity:0}.pkt.on{opacity:1}
+.node{position:absolute;left:calc(var(--x)/12*1%);top:calc(var(--y)/7.8*1%);z-index:3;align-items:center;gap:0;
+ translate:-7px -50%;text-decoration:none;padding:7px 0;line-height:1.2}
+.node.l{flex-direction:row-reverse;translate:calc(-100% + 7px) -50%;text-align:right}
+.node .m{width:14px;height:14px;transition:background .2s,scale .2s}
+.node .tx{background:var(--bg);padding:3px 10px}
+.node .t{display:block;font-weight:800;font-size:16.5px;letter-spacing:-.005em}
+.node .k{display:block;font:400 11.5px var(--mono);color:var(--mute);margin-top:1px}
+.node:hover .t,.node:focus-visible .t,.node.on .t{text-decoration:underline;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.node.on .m,.node.nb .m{background:var(--acc)}
+.node.on .m{scale:1.35}
+.node:focus-visible{outline:none}.node:focus-visible .m{outline:3px solid var(--acc);outline-offset:3px}
+.card .ck{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 8px}
+.card .ct{font-weight:800;font-size:25px;line-height:1.12;margin:0 0 8px;letter-spacing:-.01em}
+.card .cd{margin:0 0 12px;color:var(--ink);font-size:15.5px;line-height:1.5}
+.card .cl{margin:0;font:400 12px/1.5 var(--mono);color:var(--mute)}
+.card .cl b{font-weight:600;color:var(--ink)}
 
-    <main class="np-wrap" id="main-content">
-      <!-- Hero: who Noah is and what he wants, all on the first screen. -->
-      <section class="np-hero">
-        <div>
-          <p class="np-eyebrow">Florida State University &middot; Information Technology</p>
-          <h1>IT student building toward a 2027 internship</h1>
-          <p class="np-hero__lede">
-            I study Information Technology at Florida State with a 4.0 GPA,
-            graduating May 2027. I learn by building: a local AI desktop
-            assistant, a help desk backend and a network scanner. I am looking
-            for an internship in IT support, infrastructure or information
-            security.
-          </p>
-          <div class="np-hero__actions">
-            <a class="np-btn np-btn--primary" href="#work">See projects</a>
-            <a class="np-btn np-btn--ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">Download resume</a>
-            <a class="np-link" href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="np-link" href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
-        </div>
-        <div class="np-hero__photo np-photo np-photo--fade">
-          <img src="photos/noah-presenting.jpg" alt="Noah Rohlinger presenting Jarvis to the CCI Leadership Board" width="640" height="800" style="object-position: 55% 25%" />
-        </div>
-      </section>
+/* ---------- right now + contact ---------- */
+.now,.close{padding:64px 0 0}
+.now h2,.close h2{font-size:clamp(28px,3.6vw,42px);line-height:1.08;margin-bottom:22px;max-width:16em}
+.now .kv{--k:210px;max-width:900px}
+.now dd a{text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.now dd .mk{margin-right:10px}
+.now .go{margin-top:20px}
+.close p.ask{margin:0 0 24px;max-width:34em;color:var(--mute)}
+@media(max-width:700px){.now .kv{--kp:104px}.now .kv dt{font-size:12.5px}}
+@media (prefers-reduced-motion:reduce){.pkt{display:none}.map .lk,.node .m{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap bar"><a class="brand" href="index.html">noah_rohlinger</a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="top" id="nav" aria-label="Primary"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a class="res" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+<div class="stage" id="stage">
+ <div class="intro"><p class="lbl">noah_rohlinger / home</p>
+  <h1>I'm Noah, and this is the network I've built so far.</h1>
+  <p class="lead">I'm an IT student at Florida State, seeking a 2027 internship in IT support, infrastructure or information security.</p>
+  <p>I learn by building: a local AI desktop assistant, a help desk backend and a network scanner.</p>
+  <div class="go"><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div></div>
 
-      <!-- Quick facts: one or two lines each; the full story lives on the About page. -->
-      <section class="np-section" aria-label="Quick facts">
-        <dl class="np-facts">
-          <div>
-            <dt>Education</dt>
-            <dd>B.S. Information Technology, Florida State<span>4.0 GPA &middot; President's List &middot; May 2027</span></dd>
-          </div>
-          <div>
-            <dt>Experience</dt>
-            <dd>Communications Associate, FSU Geography &amp; Demography<span>FSUshadow with Florida Blue Information Security, May 2026</span></dd>
-          </div>
-          <div>
-            <dt>Looking for</dt>
-            <dd>A 2027 internship in IT support, infrastructure or security<span>Open to relocating anywhere in the US, plus hybrid or remote</span></dd>
-          </div>
-        </dl>
-      </section>
+ <figure class="core"><div class="ph"><img src="photos/noah-podium-natural.jpg" width="1444" height="1050" alt="Noah Rohlinger speaking at a podium, laptop covered in stickers" fetchpriority="high"></div><figcaption>noah_rohlinger</figcaption></figure>
 
-      <!-- Featured projects: Jarvis leads with a screenshot; each card uses its project colour class. -->
-      <section class="np-section" id="work">
-        <div class="np-section__head">
-          <div>
-            <p class="np-eyebrow">Selected work</p>
-            <h2>Projects</h2>
-          </div>
-          <a class="np-link" href="projects.html">All projects</a>
-        </div>
-        <div class="np-grid">
-          <a class="np-card np-project np-project--wide" href="jarvis.html">
-            <div class="np-project__body">
-              <p class="np-project__kind">Desktop AI assistant &middot; v1.0.0</p>
-              <h3 class="np-project__name">Jarvis</h3>
-              <p>A local Windows assistant I keep building on: wake word, speech recognition, memory, reminders and desktop automation in one system. 67 tools, about 50,900 lines of C#.</p>
-              <ul class="np-tags"><li class="np-tag">C#</li><li class="np-tag">.NET 8</li><li class="np-tag">LM Studio</li></ul>
-              <span class="np-project__more">Open project</span>
-            </div>
-            <img class="np-project__shot" src="screenshots/jarvis-operations-surface.jpg" alt="Jarvis operations surface with the live response stream, microphone levels and controls" width="1362" height="731" loading="lazy" />
-          </a>
-          <a class="np-card np-project np-project--blue" href="helpdesk-sim.html">
-            <p class="np-project__kind">Backend API</p>
-            <h3 class="np-project__name">Help Desk Sim</h3>
-            <p>Ticket workflows, SLA timers that skip nights and weekends, staff sign-in and a full audit trail.</p>
-            <ul class="np-tags"><li class="np-tag">ASP.NET Core</li><li class="np-tag">C#</li><li class="np-tag">.NET 8</li></ul>
-            <span class="np-project__more">Open project</span>
-          </a>
-          <a class="np-card np-project np-project--green" href="lansentinel.html">
-            <p class="np-project__kind">Networking</p>
-            <h3 class="np-project__name">LanSentinel</h3>
-            <p>Scans a local subnet and reports each device's IP address, hostname, online status and response time.</p>
-            <ul class="np-tags"><li class="np-tag">Java</li><li class="np-tag">Networking APIs</li><li class="np-tag">Subnet scanning</li></ul>
-            <span class="np-project__more">Open project</span>
-          </a>
-          <a class="np-card np-project np-project--violet" href="matchob.html">
-            <p class="np-project__kind">AI team lead &middot; Chrome extension</p>
-            <h3 class="np-project__name">Matchob</h3>
-            <p>A team-built Chrome extension that tailors a resume to a job posting. I lead the AI team, which matches each requirement to the resume and checks that every suggestion stays true to it.</p>
-            <ul class="np-tags"><li class="np-tag">Python</li><li class="np-tag">Amazon Bedrock</li><li class="np-tag">TypeScript</li></ul>
-            <span class="np-project__more">Open project</span>
-          </a>
-        </div>
-      </section>
+ <svg class="map" id="wires" viewBox="0 0 1200 780" aria-hidden="true" focusable="false">
+  <circle class="ring" cx="600" cy="420" r="215"/><circle class="ring" cx="600" cy="420" r="335"/>
+  <g>
+   <path class="lk" id="w-jarvis" data-e="core jarvis" d="M600 420L330 385"/>
+   <path class="lk" id="w-matchob" data-e="core matchob" d="M600 420L170 490"/>
+   <path class="lk" id="w-hds" data-e="core hds" d="M600 420L290 620"/>
+   <path class="lk" id="w-lan" data-e="core lan" d="M600 420L470 710"/>
+   <path class="lk" id="w-honors" data-e="core honors" d="M600 420L700 110"/>
+   <path class="lk" id="w-fsu" data-e="core fsu" d="M600 420L910 345"/>
+   <path class="lk" id="w-fb" data-e="core fb" d="M600 420L1010 480"/>
+   <path class="lk" id="w-comms" data-e="core comms" d="M600 420L880 620"/>
+   <path class="lk x" id="w-jh" data-e="jarvis hds" d="M330 385Q420 505 290 620"/>
+   <path class="lk x" id="w-ffb" data-e="fsu fb" d="M910 345L1010 480"/>
+   <path class="lk x" id="w-fc" data-e="fsu comms" d="M910 345Q820 480 880 620"/>
+   <path class="lk x" id="w-hf" data-e="honors fsu" d="M700 110L910 345"/>
+  </g>
+ </svg>
 
-      <!-- One contact band; the full form stays on contact.html. -->
-      <section class="np-section">
-        <div class="np-cta">
-          <div>
-            <h2>Let's talk</h2>
-            <p>Hiring for a 2027 IT internship, or want to ask about a project? Email is the fastest way to reach me.</p>
-          </div>
-          <div class="np-cta__actions">
-            <a class="np-btn np-btn--primary" href="mailto:noah.rohlinger40@gmail.com">Email me</a>
-            <a class="np-btn np-btn--ghost" href="contact.html">Contact form</a>
-          </div>
-        </div>
-      </section>
-    </main>
+ <a class="node l" data-id="jarvis" href="jarvis.html" style="--x:330;--y:385"><span class="m mk mk-p"></span><span class="tx"><span class="t">Jarvis</span><span class="k">desktop AI assistant</span></span></a>
+ <a class="node l" data-id="matchob" href="matchob.html" style="--x:170;--y:490"><span class="m mk mk-p"></span><span class="tx"><span class="t">Matchob</span><span class="k">Chrome extension</span></span></a>
+ <a class="node l" data-id="hds" href="helpdesk-sim.html" style="--x:290;--y:620"><span class="m mk mk-p"></span><span class="tx"><span class="t">Help Desk Sim</span><span class="k">backend API</span></span></a>
+ <a class="node l" data-id="lan" href="lansentinel.html" style="--x:470;--y:710"><span class="m mk mk-p"></span><span class="tx"><span class="t">LanSentinel</span><span class="k">network scanner</span></span></a>
+ <a class="node r" data-id="honors" href="about.html#honors" style="--x:700;--y:110"><span class="m mk mk-h"></span><span class="tx"><span class="t">Honor societies</span><span class="k">Tau Sigma, ODK</span></span></a>
+ <a class="node r" data-id="fsu" href="about.html#fsu" style="--x:910;--y:345"><span class="m mk mk-s"></span><span class="tx"><span class="t">FSU</span><span class="k">B.S. Information Technology</span></span></a>
+ <a class="node r" data-id="fb" href="experience.html#florida-blue" style="--x:1010;--y:480"><span class="m mk mk-w"></span><span class="tx"><span class="t">Florida Blue</span><span class="k">FSUshadow, May 2026</span></span></a>
+ <a class="node r" data-id="comms" href="experience.html#communications-associate" style="--x:880;--y:620"><span class="m mk mk-w"></span><span class="tx"><span class="t">Communications Associate</span><span class="k">FSU Geography &amp; Demography</span></span></a>
 
-    <footer class="np-wrap np-footer">
-      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
-      <nav aria-label="Elsewhere">
-        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
-        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </nav>
-    </footer>
+ <div class="card" id="card" aria-live="polite"><p class="ck">Network map</p><p class="ct">Hover or tab to a node.</p><p class="cd">Its links light up and the details show here.</p></div>
+ <div class="legend" aria-hidden="true"><span><i class="mk mk-p"></i>project</span><span><i class="mk mk-s"></i>school</span><span><i class="mk mk-w"></i>work</span><span><i class="mk mk-h"></i>honors</span></div>
 
-    <script>
-      // Phone menu: below 860px the nav stays hidden until this button opens it.
-      const menuBtn = document.querySelector(".np-menu-btn");
-      menuBtn.addEventListener("click", () => {
-        const open = document.getElementById("site-nav").classList.toggle("is-open");
-        menuBtn.setAttribute("aria-expanded", String(open));
-      });
-    </script>
-  </body>
+ <div class="list" id="list">
+  <h2>Projects</h2><ul>
+  <li id="li-jarvis"><a href="jarvis.html">Jarvis</a><span class="k">Desktop AI assistant, v1.0.0</span><p>A local Windows assistant I keep building on: wake word, speech recognition, memory, reminders and desktop automation in one system. 67 tools, about 50,900 lines of C#.</p><p class="tags">C# · .NET 8 · LM Studio</p></li>
+  <li id="li-matchob"><a href="matchob.html">Matchob</a><span class="k">Chrome extension, AI team lead, Fall 2026 to present</span><p>A team-built Chrome extension that tailors a resume to a job posting. I lead the AI team, which matches each requirement to the resume and checks that every suggestion stays true to it.</p><p class="tags">Python · Amazon Bedrock · TypeScript</p></li>
+  <li id="li-hds"><a href="helpdesk-sim.html">Help Desk Sim</a><span class="k">Backend API, 2026</span><p>Ticket workflows, SLA timers that skip nights and weekends, staff sign-in and a full audit trail.</p><p class="tags">ASP.NET Core · C# · .NET 8</p></li>
+  <li id="li-lan"><a href="lansentinel.html">LanSentinel</a><span class="k">Network scanner, 2026</span><p>Scans a local subnet and reports each device's IP address, hostname, online status and response time.</p><p class="tags">Java · Networking APIs · Subnet scanning</p></li></ul>
+  <h2>School</h2><ul>
+  <li id="li-fsu"><a href="about.html#fsu">Florida State University</a><span class="k">B.S. Information Technology</span><p>4.0 GPA, President's List in Spring 2026, expected May 2027. Before that, an A.A. in Information Technology at Tallahassee State College.</p></li></ul>
+  <h2>Work</h2><ul>
+  <li id="li-fb"><a href="experience.html#florida-blue">Florida Blue, FSUshadow</a><span class="k">Information Security Engineering, May 2026</span><p>A full day with the infosec team, chosen through FSU's competitive job-shadow program.</p></li>
+  <li id="li-comms"><a href="experience.html#communications-associate">Communications Associate</a><span class="k">FSU Geography &amp; Demography, Aug 2026 to present</span><p>I rebuilt the departmental databases, edit both WordPress sites and own spotlights, event graphics and social media.</p></li></ul>
+  <h2>Honors</h2><ul>
+  <li id="li-honors"><a href="about.html#honors">Honor societies</a><span class="k">Tau Sigma, Omicron Delta Kappa</span><p>Lifetime member of Tau Sigma at FSU, inducted October 2026, and a member of Omicron Delta Kappa's FSU Circle, inducted Fall 2026.</p></li></ul>
+ </div>
+</div>
+
+<section class="now" aria-labelledby="now-h"><p class="lbl">Right now</p><h2 id="now-h">What I'm working on.</h2>
+<dl class="kv">
+ <dt>Aug 2026 to present</dt><dd><span class="mk mk-w"></span><a href="experience.html#communications-associate">Communications Associate</a> at FSU Geography &amp; Demography</dd>
+ <dt>Fall 2026 to present</dt><dd><span class="mk mk-p"></span>AI team lead on <a href="matchob.html">Matchob</a>, FSU AWS Cloud Club</dd>
+ <dt>Spring 2026 to present</dt><dd><span class="mk mk-p"></span>Still building <a href="jarvis.html">Jarvis</a>: v1.0.0 released 21 Sep 2026</dd>
+</dl>
+<div class="go"><a href="experience.html">See all my experience</a></div></section>
+
+<section class="close" aria-labelledby="contact-h"><p class="lbl">Contact</p><h2 id="contact-h">Email is the fastest way to reach me.</h2>
+<p class="ask">Hiring for a 2027 IT internship, or want to ask about a project? I'm open to relocating anywhere in the US, plus hybrid or remote.</p>
+<dl class="kv"><dt>Email</dt><dd><a href="mailto:noah.rohlinger40@gmail.com">noah.rohlinger40@gmail.com</a></dd>
+<dt>Form</dt><dd><a href="contact.html">Contact form</a></dd>
+<dt>Resume</dt><dd><a href="resume.pdf" target="_blank" rel="noopener noreferrer">PDF</a></dd>
+<dt>GitHub</dt><dd><a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">noahrohlinger40-commits</a></dd>
+<dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">noah-rohlinger</a></dd></dl></section>
+</div>
+</main>
+<footer class="site"><div class="wrap"><span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span></div></footer>
+<script>
+var b=document.querySelector('.menu'),n=document.getElementById('nav');
+b.onclick=function(){b.setAttribute('aria-expanded',n.classList.toggle('open'))};
+addEventListener('keydown',function(e){if(e.key=='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}});
+// Network map: nodes are real links; hover or focus lights their wires and fills the detail card from the list below (one copy of each fact).
+(function(){
+ var st=document.getElementById('stage'),card=document.getElementById('card'),svg=document.getElementById('wires');
+ var nodes=[].slice.call(st.querySelectorAll('.node')),wires=[].slice.call(svg.querySelectorAll('.lk')),by={};
+ nodes.forEach(function(a){by[a.dataset.id]=a});
+ var idle=card.innerHTML,ns='http://www.w3.org/2000/svg';
+ function name(id){return id=='core'?'me':by[id].querySelector('.t').textContent}
+ function show(id){
+  var nb={};st.classList.add('has-on');
+  wires.forEach(function(w){var e=w.dataset.e.split(' '),hit=e.indexOf(id)>-1;w.classList.toggle('on',hit);if(w._p)w._p.classList.toggle('on',hit);if(hit)e.forEach(function(x){if(x!=id)nb[x]=1})});
+  nodes.forEach(function(a){a.classList.toggle('on',a.dataset.id==id);a.classList.toggle('nb',!!nb[a.dataset.id])});
+  var li=document.getElementById('li-'+id),a=by[id];
+  card.innerHTML='';
+  function add(tag,cls,txt){var el=document.createElement(tag);el.className=cls;el.textContent=txt;card.appendChild(el);return el}
+  add('p','ck',a.querySelector('.k').textContent);add('p','ct',a.querySelector('.t').textContent);
+  add('p','cd',li.querySelector('p').textContent);
+  var cl=add('p','cl','Linked to: ');var bb=document.createElement('b');bb.textContent=Object.keys(nb).map(name).join(', ');cl.appendChild(bb);
+ }
+ function clear(){st.classList.remove('has-on');wires.forEach(function(w){w.classList.remove('on');if(w._p)w._p.classList.remove('on')});nodes.forEach(function(a){a.classList.remove('on','nb')});card.innerHTML=idle}
+ nodes.forEach(function(a){var id=a.dataset.id;
+  a.addEventListener('mouseenter',function(){show(id)});a.addEventListener('focus',function(){show(id)});
+  a.addEventListener('mouseleave',clear);a.addEventListener('blur',clear)});
+ // packets: one dot per wire, only visible while its wire is lit; skipped when the visitor prefers reduced motion
+ if(!matchMedia('(prefers-reduced-motion:reduce)').matches)wires.forEach(function(w,i){
+  var c=document.createElementNS(ns,'circle');c.setAttribute('r','4.5');c.setAttribute('class','pkt');
+  var m=document.createElementNS(ns,'animateMotion');m.setAttribute('dur',(3+i%4*.6)+'s');m.setAttribute('repeatCount','indefinite');
+  var mp=document.createElementNS(ns,'mpath');mp.setAttributeNS('http://www.w3.org/1999/xlink','href','#'+w.id);mp.setAttribute('href','#'+w.id);
+  m.appendChild(mp);c.appendChild(m);svg.appendChild(c);w._p=c});
+})();
+</script>
+</body>
 </html>

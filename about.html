@@ -1,224 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Background behind Noah Rohlinger's IT path: Florida State University coursework, a Communications Associate role, an information security shadow with Florida Blue, student organizations, and leadership through martial arts." />
-    <link rel="canonical" href="https://noahrohling.netlify.app/about.html" />
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <meta property="og:title" content="Noah Rohlinger | About" />
-    <meta property="og:description" content="Background behind Noah Rohlinger's IT path: Florida State University coursework, a Communications Associate role, an information security shadow with Florida Blue, student organizations, and leadership through martial arts." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://noahrohling.netlify.app/about.html" />
-    <meta property="og:image" content="https://noahrohling.netlify.app/social-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noah Rohlinger | About</title>
+<meta name="description" content="About Noah Rohlinger: Florida State University Information Technology student with a 4.0 GPA, his skills, certificates, honor societies and clubs, and a timeline of his path so far.">
+<link rel="canonical" href="https://noahrohling.netlify.app/about.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Noah Rohlinger | About">
+<meta property="og:description" content="About Noah Rohlinger: Florida State University Information Technology student with a 4.0 GPA, his skills, certificates, honor societies and clubs, and a timeline of his path so far.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://noahrohling.netlify.app/about.html">
+<meta property="og:image" content="https://noahrohling.netlify.app/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+/* ---------- intro: photo on the right, fading toward the text and into the section below ---------- */
+.hero{position:relative;overflow:hidden}
+.hero .photo{height:300px;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 60%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 60%,transparent 100%)}
+.hero .photo img{height:100%;object-fit:cover;object-position:50% 8%;filter:var(--ph-filter-event)}
+.intro{padding:6px 0 40px}
+.intro h1{font-size:clamp(34px,9vw,44px);line-height:1.06;margin-bottom:18px}
+.intro p{margin:0 0 12px;max-width:32em;color:var(--mute)}
+.intro p.lead{color:var(--ink);font-size:18px}
+.intro .go{margin-top:20px}
+@media(min-width:900px){
+ .hero{min-height:500px}
+ .hero .photo{position:absolute;right:5vw;top:0;height:auto;aspect-ratio:4/5;width:min(34vw,430px);
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to bottom,#000 0,#000 70%,transparent 100%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to bottom,#000 0,#000 70%,transparent 100%);mask-composite:intersect}
+ .hero .photo img{height:100%;object-position:50% 30%}
+ .hero .wrap{position:relative}
+ .intro{width:min(46%,520px);padding:84px 0 70px}
+ .intro h1{font-size:clamp(40px,4.4vw,56px)}
+}
+.rows>li,.ent{scroll-margin-top:20px}
+.rows h3 .mk{margin-right:10px}
 
-    <title>Noah Rohlinger | About</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
-    <link rel="stylesheet" href="redesign.css" />
-  </head>
-  <body class="np-page">
-    <a class="np-skip" href="#main-content">Skip to main content</a>
+/* ---------- skills ---------- */
+.uses{font:400 13px var(--mono);color:var(--mute)}
+.uses a{color:var(--acc);text-underline-offset:4px}
+.also{font:400 14px var(--mono);color:var(--mute);margin:18px 0 0}
 
-    <header class="np-header">
-      <div class="np-wrap np-header__inner">
-        <a class="np-brand" href="index.html">Noah Rohlinger</a>
-        <nav class="np-nav" id="site-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="about.html" aria-current="page">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a class="np-btn np-btn--ghost np-btn--sm" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        <button class="np-menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
-      </div>
-    </header>
+/* ---------- timeline: one line per entry ---------- */
+.unrel{display:grid;gap:4px 24px;padding:16px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:26px}
+.unrel .when{font:500 13px var(--mono);color:var(--acc)}
+.unrel p{margin:0;font-size:18px;font-weight:500;max-width:34em}
+.filters{display:none;gap:4px 26px;flex-wrap:wrap;align-items:baseline;margin:22px 0 4px;font:500 14px var(--mono)}
+.js .filters{display:flex}
+.filters button{background:none;border:0;border-bottom:2px solid transparent;padding:6px 0;font:inherit;color:var(--mute);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.filters button sup{font-size:10.5px;vertical-align:top;position:relative;top:-2px;margin-left:-3px}
+.filters button:hover{color:var(--ink)}
+.filters button[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--acc)}
+.filters .st{margin-left:auto;font-weight:400;font-size:12.5px;color:var(--mute)}
+.tl{list-style:none;margin:0;padding:0}
+.ent{display:grid;gap:2px 24px;padding:13px 0;border-top:1px solid var(--line)}
+.ent[hidden]{display:none}
+.ent:last-child{border-bottom:1px solid var(--line)}
+.ent .when{font:500 13px/1.6 var(--mono);color:var(--mute)}
+.ent .ty{display:inline-flex;align-items:center;gap:8px;font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-right:10px;color:var(--mute)}
+.ent .t{font-size:17px;font-weight:600}
+.ent a.t{text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.ent a.t:hover{color:var(--acc)}
+.ent.big .t{font-weight:800}
+@media(min-width:900px){.ent,.unrel{grid-template-columns:150px minmax(0,1fr)}}
+@media(max-width:700px){.filters .st{margin-left:0;flex-basis:100%}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap bar"><a class="brand" href="index.html">noah_rohlinger</a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="top" id="nav" aria-label="Primary"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a class="res" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav></div></header>
+<main id="main">
 
-    <main class="np-wrap" id="main-content">
-      <section class="np-page-head np-page-head--photo">
-        <div>
-          <p class="np-eyebrow">About</p>
-          <h1>Background behind my IT path</h1>
-          <p class="np-page-head__lede">I am an Information Technology student at Florida State University. I built this portfolio to give employers a clearer view of what I am learning and what I can already do.</p>
-          <div class="np-page-head__actions">
-            <a class="np-btn np-btn--primary" href="projects.html">View projects</a>
-            <a class="np-link" href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="np-link" href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="np-link" href="contact.html">Reach out</a>
-          </div>
-        </div>
-        <div class="np-page-head__photo np-photo np-photo--fade">
-          <img src="photos/noah-podium.jpg" alt="Noah Rohlinger at the podium presenting Jarvis, with an FSU College of Communication and Information sticker on his laptop" width="640" height="800" style="object-position: 50% 30%" />
-        </div>
-      </section>
+<div class="hero">
+ <!-- one photo on this page: Noah at the CCI Leadership Board table (stand-in until new photos) -->
+ <figure class="photo"><img src="photos/noah-cci-table.jpg" width="420" height="525" alt="Noah Rohlinger smiling at a table during the CCI Leadership Board event" fetchpriority="high"></figure>
+ <div class="wrap"><div class="intro">
+  <p class="lbl">noah_rohlinger / about</p>
+  <h1>Background behind my IT path</h1>
+  <p class="lead">I'm Noah, an Information Technology student at Florida State University with a 4.0 GPA, graduating in May 2027. I'm looking for a 2027 internship in IT support, infrastructure or information security.</p>
+  <p>I learn by building, and I keep improving what I build. Jarvis, my local AI desktop assistant, has grown since Spring 2026 into a 67-tool system with a public v1.0.0 release.</p>
+  <p>Outside of class I'm a Communications Associate for FSU's Departments of Geography and Demography and the nursery manager at Dickerson Landscaping. My taekwondo school gave me its leadership certificate for how I taught the students under me.</p>
+  <div class="go"><a href="experience.html">See my experience</a><a href="projects.html">View projects</a><a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+ </div></div>
+</div>
 
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Education</h2>
-        </div>
-        <ul class="np-points">
-          <li><strong>Florida State University</strong> Working toward a B.S. in Information Technology with a 4.0 GPA, expected May 2027.</li>
-          <li><strong>Tallahassee State College</strong> Completed an A.A. in Information Technology from Spring 2023 through December 2025.</li>
-          <li><strong>Coursework to projects</strong> I use coursework as a starting point for portfolio projects so I can turn class concepts into practical examples.</li>
-        </ul>
-      </section>
+<!-- ============ education ============ -->
+<section class="sec" id="education" aria-labelledby="edu-h"><div class="wrap">
+ <p class="lbl">Education</p>
+ <h2 id="edu-h">Education</h2>
+ <ul class="rows">
+  <li id="fsu"><div><h3><span class="mk mk-s"></span>Florida State University</h3><p class="kind">B.S. Information Technology · Spring 2026 to May 2027 (expected)</p></div><div><p class="ink">4.0 GPA · <a href="certifications/CeD.26L1-R1BB-NMRY.pdf" target="_blank" rel="noopener noreferrer">President's List, Spring 2026</a></p><p>A 4.0 across a full course load in my first semester at Florida State.</p></div></li>
+  <li id="tsc"><div><h3><span class="mk mk-s"></span>Tallahassee State College</h3><p class="kind">A.A. Information Technology · Spring 2023 to December 2025</p></div><div><p>Where I finished my associate degree before transferring to Florida State.</p></div></li>
+ </ul>
+ <h3 class="sub" id="honors">Honor societies</h3>
+ <ul class="rows">
+  <li id="tau-sigma"><div><h3><span class="mk mk-h"></span>Tau Sigma National Honor Society</h3><p class="kind">Lifetime member · FSU chapter · inducted 1 Oct 2026</p></div><p>The honor society for transfer students.</p></li>
+  <li id="odk"><div><h3><span class="mk mk-h"></span>Omicron Delta Kappa</h3><p class="kind">Member · FSU Circle · inducted Fall 2026</p></div><p>The National Leadership Honor Society.</p></li>
+ </ul>
+</div></section>
 
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Experience</h2>
-        </div>
-        <ul class="np-points np-points--rows">
-          <li><strong>Florida State University, Communications Associate</strong> Supporting the Departments of Geography and Demography since August 2026. I restructured the departmental databases on my own initiative so records are consistent and easier to find, handle ongoing WordPress site edits and content updates for both departments, and own day-to-day communications including student and research spotlights, event graphics, and social media.</li>
-          <li><strong>Dickerson Landscaping, Nursery Manager</strong> A management role I have held since July 2026. I am responsible for the standing plant stock at the company's private nursery: tracking what is on hand, keeping the inventory healthy, and making sure material is ready when the crews need it. It is the clearest example on my resume of owning an operation end to end and being accountable for the condition it is in.</li>
-          <li><strong>FSUshadow, Florida Blue (May 2026)</strong> Selected through Florida State University's competitive matched job shadow program for a full day with Florida Blue's enterprise Information Security Engineering team. I observed Palo Alto security tools, troubleshooting, policies, and active security hardening in a real environment.</li>
-          <li><strong>Tallahassee Nurseries, Register Staff and Loading Team Lead</strong> Handled sales transactions, helped customers, supported training, and worked with the loading team in a fast-paced environment.</li>
-          <li><strong>Blue Parrot Oceanfront Cafe (Busser and Barback), SLS and Horizon Home Modifications (Laborer)</strong> Worked in service and labor roles that strengthened reliability, pace, teamwork, and communication.</li>
-        </ul>
-      </section>
+<!-- ============ skills ============ -->
+<section class="sec" id="skills" aria-labelledby="skills-h"><div class="wrap">
+ <p class="lbl">Skills</p>
+ <h2 id="skills-h">Skills I can back up right now</h2>
+ <p class="deck">My strongest current work is in C#/.NET, front-end web work, networking fundamentals, and technical communication.</p>
+ <h3 class="sub">Main tools I use</h3>
+ <ul class="rows">
+  <li><div><h3>C# / .NET 8</h3><p class="kind">Most active</p></div><div><p>My main development focus right now, especially for backend logic, APIs, and larger multi-part application work.</p><p class="uses">Shows up in <a href="helpdesk-sim.html">Help Desk Sim</a> and <a href="jarvis.html">Jarvis</a></p></div></li>
+  <li><div><h3>HTML / CSS / JavaScript</h3><p class="kind">Current site work</p></div><div><p>Used to build and refine this portfolio, including responsive layouts, page structure, and small interactive features that make the site easier to use.</p><p class="uses">Shows up in <a href="portfolio-website.html">Portfolio Website</a></p></div></li>
+  <li><div><h3>Java</h3><p class="kind">Project backed</p></div><div><p>Applied in LanSentinel for subnet scanning, device reachability checks, hostname lookup, and network-related logic.</p><p class="uses">Shows up in <a href="lansentinel.html">LanSentinel</a></p></div></li>
+  <li><div><h3>SQL / Data Organization</h3><p class="kind">Supporting experience</p></div><div><p>Supports how I think about structured information, database workflows, and organized data handling.</p></div></li>
+  <li><div><h3>Python</h3><p class="kind">Utility language</p></div><div><p>Useful for scripting, experimentation, and smaller automation or support tasks while I continue building my broader programming foundation.</p><p class="uses">Shows up in <a href="matchob.html">Matchob</a></p></div></li>
+  <li><div><h3>C++</h3><p class="kind">Coursework base</p></div><div><p>Part of the programming foundation that strengthened problem solving, logic, and working through structured assignments in school.</p></div></li>
+ </ul>
+ <p class="also">Also on the list: ASP.NET Core, Networking, Git / GitHub, Documentation.<br>Languages: English (native), Chinese (beginner conversational).</p>
 
-      <section class="np-section" id="certificates">
-        <div class="np-section__head">
-          <h2>Achievement and supporting documents</h2>
-        </div>
-        <p class="np-prose">The first card is my President's List achievement. The rest are the certificates behind my infrastructure, service-management, networking, and troubleshooting background. Every one opens as a PDF.</p>
-        <div class="np-grid">
-          <a class="np-card np-project" href="certifications/CeD.26L1-R1BB-NMRY.pdf" target="_blank" rel="noopener noreferrer">
-            <p class="np-project__kind">Academic achievement</p>
-            <h3 class="np-project__name">President's List Achievement</h3>
-            <p>Spring 2026 4.0 GPA</p>
-            <p>This achievement reflects my Spring 2026 semester and gives employers a direct proof point that I can stay disciplined across a full course load.</p>
-            <p>What I got out of it: it reinforced that consistency, organization, and follow-through matter just as much as raw technical ability.</p>
-            <ul class="np-tags">
-              <li class="np-tag">Spring 2026</li>
-              <li class="np-tag">4.0 GPA</li>
-              <li class="np-tag">Academic discipline</li>
-            </ul>
-            <span class="np-project__more">Open certificate PDF</span>
-          </a>
-          <a class="np-card np-project" href="certifications/it-infrastructure-fundamentals.pdf" target="_blank" rel="noopener noreferrer">
-            <p class="np-project__kind">Technical certificate</p>
-            <h3 class="np-project__name">IT Infrastructure Fundamentals</h3>
-            <p>This certificate strengthened my understanding of the basic infrastructure concepts behind networks, servers, and the environments technical teams support.</p>
-            <p>What I got out of it: it gave me a clearer baseline for how hardware, services, and connectivity fit together before moving deeper into projects.</p>
-            <ul class="np-tags">
-              <li class="np-tag">Infrastructure</li>
-              <li class="np-tag">Servers</li>
-              <li class="np-tag">Foundations</li>
-            </ul>
-            <span class="np-project__more">Open certificate PDF</span>
-          </a>
-          <a class="np-card np-project" href="certifications/it-service-management-problem-management.pdf" target="_blank" rel="noopener noreferrer">
-            <p class="np-project__kind">Technical certificate</p>
-            <h3 class="np-project__name">IT Service Management Foundations: Problem Management</h3>
-            <p>This certificate added service-management context around recurring issues, root-cause thinking, and how support teams reduce repeat problems.</p>
-            <p>What I got out of it: it helped me think beyond fixing one ticket and more about documenting patterns and preventing the same issue from coming back.</p>
-            <ul class="np-tags">
-              <li class="np-tag">ITSM</li>
-              <li class="np-tag">Problem management</li>
-              <li class="np-tag">Operations</li>
-            </ul>
-            <span class="np-project__more">Open certificate PDF</span>
-          </a>
-          <a class="np-card np-project" href="certifications/networking-foundations-networking-basics.pdf" target="_blank" rel="noopener noreferrer">
-            <p class="np-project__kind">Technical certificate</p>
-            <h3 class="np-project__name">Networking Foundations: Networking Basics</h3>
-            <p>This certificate supported the core networking concepts that also show up in my coursework and projects like LanSentinel.</p>
-            <p>What I got out of it: it gave me stronger vocabulary for IPs, connectivity, and network structure so I can explain project decisions more clearly.</p>
-            <ul class="np-tags">
-              <li class="np-tag">Networking</li>
-              <li class="np-tag">IP concepts</li>
-              <li class="np-tag">Coursework</li>
-            </ul>
-            <span class="np-project__more">Open certificate PDF</span>
-          </a>
-          <a class="np-card np-project" href="certifications/wireshark-network-troubleshooting.pdf" target="_blank" rel="noopener noreferrer">
-            <p class="np-project__kind">Technical certificate</p>
-            <h3 class="np-project__name">Wireshark Network Troubleshooting</h3>
-            <p>This certificate added exposure to network troubleshooting with Wireshark and the basics of reading traffic to spot communication issues.</p>
-            <p>What I got out of it: it pushed me to think more carefully about how problems appear on the wire instead of only at the application layer.</p>
-            <ul class="np-tags">
-              <li class="np-tag">Wireshark</li>
-              <li class="np-tag">Troubleshooting</li>
-              <li class="np-tag">Traffic analysis</li>
-            </ul>
-            <span class="np-project__more">Open certificate PDF</span>
-          </a>
-        </div>
-      </section>
+ <h3 class="sub">How I work</h3>
+ <ul class="rows">
+  <li><h3>Teaching and leading others</h3><p>Explaining a problem patiently and clearly, the skill my <a href="#taekwondo">taekwondo leadership certificate</a> recognized.</p></li>
+  <li><h3>Customer communication</h3><p>Built through customer-facing work that required patience, clarity, and reliability.</p></li>
+  <li><h3>Ownership and accountability</h3><p>Owning a job end to end and staying ahead of problems, as I do managing a nursery's stock on my own.</p></li>
+ </ul>
 
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Involvement at FSU</h2>
-        </div>
-        <ul class="np-points np-points--four">
-          <li><strong>ACM</strong> Association for Computing Machinery, FSU chapter.</li>
-          <li><strong>ThinkAI</strong> Student organization focused on artificial intelligence and machine learning.</li>
-          <li><strong>AITP</strong> Association of Information Technology Professionals.</li>
-          <li><strong>HISA</strong> Health informatics student organization, covering how IT and data work applies in healthcare settings.</li>
-        </ul>
-      </section>
+ <h3 class="sub">What I want to improve</h3>
+ <p style="max-width:38em;margin:0 0 10px">The next step is not adding a longer list of tools. It is getting deeper with the ones I already use most: stronger C#/.NET work, better networking fluency, and clearer project explanations.</p>
+ <p style="max-width:38em;margin:0;color:var(--mute)">That is the direction I want this portfolio to keep moving in.</p>
+</div></section>
 
-      <section class="np-section">
-        <div class="np-section__head">
-          <h2>Leadership through martial arts</h2>
-        </div>
-        <p class="np-prose">My Certificate of Leadership from ATA Songahm Taekwondo is not a course I signed up for or a box I checked off. My instructors gave it to me because of how I was teaching the students under me and how I carried myself in the school, and they decided on their own that it was earned.</p>
-        <ul class="np-points">
-          <li><strong>Teaching and coaching</strong> I worked directly with students, breaking techniques down so they could actually follow them and adjusting how I explained things depending on who I was working with.</li>
-          <li><strong>Setting the example</strong> The recognition came from how I conducted myself day to day, not from a test score. In a school, the way you carry yourself is what the students copy.</li>
-          <li><strong>Why it matters for IT</strong> Teaching someone a technique they are struggling with is the same skill as walking a user through a problem they do not understand yet: patience, clear explanation, and staying steady when the other person is frustrated.</li>
-        </ul>
-        <p class="np-prose" style="margin-top: var(--space-6)">This certificate is a physical award and was never issued digitally, so it is not among the certificates above, but I can bring the original to an interview.</p>
-      </section>
+<!-- ============ certificates ============ -->
+<section class="sec" id="certificates" aria-labelledby="cert-h"><div class="wrap">
+ <p class="lbl">Certificates</p>
+ <h2 id="cert-h">Certificates</h2>
+ <p class="deck">The ones with a digital copy open as a PDF.</p>
+ <ul class="rows">
+  <li><div><h3><a href="certifications/it-infrastructure-fundamentals.pdf" target="_blank" rel="noopener noreferrer">IT Infrastructure Fundamentals</a></h3></div><p>The basics behind networks, servers and the environments IT teams support.</p></li>
+  <li><div><h3><a href="certifications/it-service-management-problem-management.pdf" target="_blank" rel="noopener noreferrer">IT Service Management Foundations: Problem Management</a></h3></div><p>Root-cause thinking: preventing the same issue from coming back, not just closing one ticket.</p></li>
+  <li><div><h3><a href="certifications/networking-foundations-networking-basics.pdf" target="_blank" rel="noopener noreferrer">Networking Foundations: Networking Basics</a></h3></div><p>IP addressing, connectivity and network structure, the same concepts behind LanSentinel.</p></li>
+  <li><div><h3><a href="certifications/wireshark-network-troubleshooting.pdf" target="_blank" rel="noopener noreferrer">Wireshark Network Troubleshooting</a></h3></div><p>Reading traffic to see how a problem shows up on the wire.</p></li>
+  <li><div><h3>Adobe Certified Professional</h3><p class="kind">2023</p></div><p>Illustrator and Photoshop.</p></li>
+  <li><div><h3>Certificate in Game Design</h3><p class="kind">George Mason University</p></div><p>An award listed on my resume.</p></li>
+  <li><div><h3>Certificate of Leadership</h3><p class="kind">ATA Songahm Taekwondo</p></div><p>A physical award with no digital copy. <a href="#taekwondo">The story behind it</a> is below.</p></li>
+ </ul>
+</div></section>
 
-      <section class="np-section" id="background">
-        <div class="np-section__head">
-          <h2>Additional background</h2>
-        </div>
-        <ul class="np-points">
-          <li><strong>Adobe Certified Professional</strong> Illustrator and Photoshop, earned in 2023.</li>
-          <li><strong>Certificate of Game Design</strong> Award listed on my resume from George Mason University.</li>
-          <li><strong>Chinese</strong> Beginner conversational, as listed on my resume.</li>
-        </ul>
-      </section>
+<!-- ============ involvement ============ -->
+<section class="sec" id="involvement" aria-labelledby="inv-h"><div class="wrap">
+ <p class="lbl">Involvement</p>
+ <h2 id="inv-h">Clubs and leadership</h2>
+ <h3 class="sub">At FSU</h3>
+ <ul class="rows">
+  <li><h3>ACM</h3><p>Association for Computing Machinery, FSU chapter.</p></li>
+  <li><h3>ThinkAI</h3><p>Student organization focused on artificial intelligence and machine learning.</p></li>
+  <li><h3>AITP</h3><p>Association of Information Technology Professionals.</p></li>
+  <li><h3>HISA</h3><p>Health informatics student organization, covering how IT and data work applies in healthcare settings.</p></li>
+ </ul>
+ <h3 class="sub" id="taekwondo">Leadership through martial arts</h3>
+ <p style="max-width:40em;margin:0 0 18px">My Certificate of Leadership from ATA Songahm Taekwondo is not a course I signed up for or a box I checked off. My instructors gave it to me because of how I was teaching the students under me and how I carried myself in the school, and they decided on their own that it was earned.</p>
+ <ul class="rows">
+  <li><h3>Teaching and coaching</h3><p>I worked directly with students, breaking techniques down so they could actually follow them and adjusting how I explained things depending on who I was working with.</p></li>
+  <li><h3>Setting the example</h3><p>The recognition came from how I conducted myself day to day, not from a test score. In a school, the way you carry yourself is what the students copy.</p></li>
+  <li><h3>Why it matters for IT</h3><p>Teaching someone a technique they are struggling with is the same skill as walking a user through a problem they do not understand yet: patience, clear explanation, and staying steady when the other person is frustrated.</p></li>
+ </ul>
+ <p style="max-width:40em;margin:18px 0 0;color:var(--mute)">It was never issued digitally, but I can bring the original to an interview.</p>
+</div></section>
 
-      <section class="np-section">
-        <div class="np-cta">
-          <div>
-            <h2>Let's talk</h2>
-            <p>Hiring for a 2027 IT internship, or want to ask about a project? Email is the fastest way to reach me.</p>
-          </div>
-          <div class="np-cta__actions">
-            <a class="np-btn np-btn--primary" href="mailto:noah.rohlinger40@gmail.com">Email me</a>
-            <a class="np-btn np-btn--ghost" href="contact.html">Contact form</a>
-          </div>
-        </div>
-      </section>
-    </main>
+<!-- ============ timeline ============ -->
+<section class="sec" id="log" aria-labelledby="log-h"><div class="wrap">
+ <p class="lbl">Timeline</p>
+ <h2 id="log-h">The path so far, at a glance</h2>
+ <div class="unrel"><span class="when">NEXT</span><p>A 2027 internship in IT support, infrastructure or information security.</p></div>
+ <div class="filters" id="filters" role="group" aria-label="Filter the timeline">
+  <button type="button" data-f="all" aria-pressed="true">All</button>
+  <button type="button" data-f="projects" aria-pressed="false"><i class="mk mk-p"></i>Projects</button>
+  <button type="button" data-f="work" aria-pressed="false"><i class="mk mk-w"></i>Work</button>
+  <button type="button" data-f="school" aria-pressed="false"><i class="mk mk-s"></i>School</button>
+  <button type="button" data-f="honors" aria-pressed="false"><i class="mk mk-h"></i>Honors</button>
+  <span class="st" id="st" role="status"></span></div>
+ <ol class="tl">
+  <li class="ent" data-c="projects"><span class="when">Oct 2026</span><span><span class="ty"><i class="mk mk-p"></i>Presented</span><a class="t" href="jarvis.html#presented">Jarvis, to the FSU CCI Leadership Board</a></span></li>
+  <li class="ent" data-c="honors"><span class="when">1 Oct 2026</span><span><span class="ty"><i class="mk mk-h"></i>Inducted</span><a class="t" href="#tau-sigma">Tau Sigma National Honor Society</a></span></li>
+  <li class="ent" data-c="honors"><span class="when">Fall 2026</span><span><span class="ty"><i class="mk mk-h"></i>Inducted</span><a class="t" href="#odk">Omicron Delta Kappa, FSU Circle</a></span></li>
+  <li class="ent" data-c="projects"><span class="when">Fall 2026</span><span><span class="ty"><i class="mk mk-p"></i>Joined</span><a class="t" href="matchob.html">Matchob, as AI team lead</a></span></li>
+  <li class="ent big" data-c="projects"><span class="when">21 Sep 2026</span><span><span class="ty"><i class="mk mk-p"></i>Shipped</span><a class="t" href="jarvis.html">Jarvis v1.0.0</a></span></li>
+  <li class="ent" data-c="work"><span class="when">Aug 2026</span><span><span class="ty"><i class="mk mk-w"></i>Joined</span><a class="t" href="experience.html#communications-associate">Communications Associate, FSU Geography &amp; Demography</a></span></li>
+  <li class="ent" data-c="work"><span class="when">Jul 2026</span><span><span class="ty"><i class="mk mk-w"></i>Joined</span><a class="t" href="experience.html#nursery">Nursery Manager, Dickerson Landscaping</a></span></li>
+  <li class="ent" data-c="work"><span class="when">May 2026</span><span><span class="ty"><i class="mk mk-w"></i>Shadowed</span><a class="t" href="experience.html#florida-blue">Florida Blue Information Security Engineering, through FSUshadow</a></span></li>
+  <li class="ent" data-c="projects"><span class="when">Spring break 2026</span><span><span class="ty"><i class="mk mk-p"></i>Shipped</span><a class="t" href="helpdesk-sim.html">Help Desk Sim</a></span></li>
+  <li class="ent" data-c="projects"><span class="when">2026</span><span><span class="ty"><i class="mk mk-p"></i>Shipped</span><a class="t" href="lansentinel.html">LanSentinel</a></span></li>
+  <li class="ent" data-c="projects"><span class="when">Spring 2026</span><span><span class="ty"><i class="mk mk-p"></i>Started</span><a class="t" href="jarvis.html">Jarvis</a></span></li>
+  <li class="ent" data-c="school"><span class="when">Spring 2026</span><span><span class="ty"><i class="mk mk-s"></i>Joined</span><a class="t" href="#fsu">Florida State University</a></span></li>
+  <li class="ent" data-c="school"><span class="when">Spring 2023</span><span><span class="ty"><i class="mk mk-s"></i>Started</span><a class="t" href="#tsc">Tallahassee State College</a></span></li>
+  <li class="ent" data-c="work"><span class="when">2019 to 2026</span><span><span class="ty"><i class="mk mk-w"></i>Earlier</span><a class="t" href="experience.html#earlier">Tallahassee Nurseries, and service and labor roles</a></span></li>
+ </ol>
+</div></section>
 
-    <footer class="np-wrap np-footer">
-      <span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
-      <nav aria-label="Elsewhere">
-        <a href="mailto:noah.rohlinger40@gmail.com">Email</a>
-        <a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </nav>
-    </footer>
-
-    <script>
-      // Phone menu: below 860px the nav stays hidden until this button opens it.
-      const menuBtn = document.querySelector(".np-menu-btn");
-      menuBtn.addEventListener("click", () => {
-        const open = document.getElementById("site-nav").classList.toggle("is-open");
-        menuBtn.setAttribute("aria-expanded", String(open));
-      });
-    </script>
-  </body>
+</main>
+<footer class="site"><div class="wrap"><span>&copy; 2026 Noah Rohlinger &middot; Tallahassee, Florida</span>
+<nav aria-label="Elsewhere"><a href="mailto:noah.rohlinger40@gmail.com">Email</a><a href="https://github.com/noahrohlinger40-commits" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/noah-rohlinger" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav></div></footer>
+<script>
+var b=document.querySelector('.menu'),n=document.getElementById('nav');
+b.onclick=function(){b.setAttribute('aria-expanded',n.classList.toggle('open'))};
+addEventListener('keydown',function(e){if(e.key=='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}});
+// Timeline filters: without this script every entry shows and the buttons stay hidden.
+(function(){
+ var bar=document.getElementById('filters'),btns=[].slice.call(bar.querySelectorAll('button')),ents=[].slice.call(document.querySelectorAll('.ent')),st=document.getElementById('st');
+ function count(f){return ents.filter(function(e){return f=='all'||e.dataset.c==f}).length}
+ btns.forEach(function(x){var s=document.createElement('sup');s.textContent=count(x.dataset.f);x.appendChild(s)});
+ function apply(f){
+  btns.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.f==f)});
+  ents.forEach(function(e){e.hidden=!(f=='all'||e.dataset.c==f)});
+  st.textContent='Showing '+count(f)+' of '+ents.length;
+ }
+ btns.forEach(function(x){x.onclick=function(){apply(x.dataset.f)}});
+ apply('all');
+})();
+</script>
+</body>
 </html>
